@@ -2,19 +2,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Linux</title>
-    <link>https://linux.mingguilu.com/</link>
+    <link>http://linux.mingguilu.com/</link>
     <description>Recent content on Linux</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <lastBuildDate>Wed, 15 Feb 2017 16:21:10 +0800</lastBuildDate>
-    <atom:link href="https://linux.mingguilu.com/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://linux.mingguilu.com/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>about</title>
-      <link>https://linux.mingguilu.com/about/</link>
+      <link>http://linux.mingguilu.com/about/</link>
       <pubDate>Wed, 15 Feb 2017 16:21:10 +0800</pubDate>
       
-      <guid>https://linux.mingguilu.com/about/</guid>
+      <guid>http://linux.mingguilu.com/about/</guid>
       <description>&lt;p&gt;Hello ! Im mingguilu !&lt;/p&gt;
 </description>
     </item>
