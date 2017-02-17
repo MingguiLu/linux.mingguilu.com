@@ -10,11 +10,11 @@
     <atom:link href="http://linux.mingguilu.com/post/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
-      <title>Ubuntu安装开源版禅道</title>
-      <link>http://linux.mingguilu.com/2017/02/17/ubuntu%E5%AE%89%E8%A3%85%E5%BC%80%E6%BA%90%E7%89%88%E7%A6%85%E9%81%93</link>
+      <title>Ubuntu使用源码包安装禅道开源版</title>
+      <link>http://linux.mingguilu.com/2017/02/17/ubuntu%E4%BD%BF%E7%94%A8%E6%BA%90%E7%A0%81%E5%8C%85%E5%AE%89%E8%A3%85%E7%A6%85%E9%81%93%E5%BC%80%E6%BA%90%E7%89%88</link>
       <pubDate>Fri, 17 Feb 2017 22:48:12 +0800</pubDate>
       
-      <guid>http://linux.mingguilu.com/2017/02/17/ubuntu%E5%AE%89%E8%A3%85%E5%BC%80%E6%BA%90%E7%89%88%E7%A6%85%E9%81%93</guid>
+      <guid>http://linux.mingguilu.com/2017/02/17/ubuntu%E4%BD%BF%E7%94%A8%E6%BA%90%E7%A0%81%E5%8C%85%E5%AE%89%E8%A3%85%E7%A6%85%E9%81%93%E5%BC%80%E6%BA%90%E7%89%88</guid>
       <description>
 
 &lt;h3 id=&#34;1-搭建lamp环境:77831f7a9680d8377ea1d87039e03612&#34;&gt;1. 搭建LAMP环境&lt;/h3&gt;
@@ -64,7 +64,7 @@ bin  config  db  doc  framework  lib  module  tmp  VERSION  www
 
 &lt;pre&gt;&lt;code&gt;chmod o=rwx -R /var/www/html/zentaopms/tmp/
 
-chmod o=rwx -R /var/www/html/zentaopms/www/data 
+chmod o=rwx -R /var/www/html/zentaopms/www/data
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;h4 id=&#34;刷新系统检查-全部通过:77831f7a9680d8377ea1d87039e03612&#34;&gt;刷新系统检查，全部通过&lt;/h4&gt;
@@ -81,9 +81,9 @@ chmod o=rwx -R /var/www/html/zentaopms/www/data
 
 &lt;p&gt;根据提示拷贝文本框中的配置内容，保存到&amp;rdquo; /var/www/html/zentaopms/config/my.php &amp;ldquo;中&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;$ sudo vim /var/www/html/zentaopms/config/my.php 
+&lt;pre&gt;&lt;code&gt;$ sudo vim /var/www/html/zentaopms/config/my.php
 
-$ cat /var/www/html/zentaopms/config/my.php 
+$ cat /var/www/html/zentaopms/config/my.php
 &amp;lt;?php
 $config-&amp;gt;installed       = true;
 $config-&amp;gt;debug           = false;
@@ -113,7 +113,7 @@ $config-&amp;gt;default-&amp;gt;lang   = &#39;zh-cn&#39;;
 &lt;pre&gt;&lt;code&gt;$ pwd
 /var/www/html/zentaopms/www/
 
-$ sudo rm -rvf install.php upgrade.php 
+$ sudo rm -rvf install.php upgrade.php
 已删除&#39;install.php&#39;
 已删除&#39;upgrade.php&#39;
 &lt;/code&gt;&lt;/pre&gt;
@@ -159,7 +159,7 @@ MariaDB [mysql]&amp;gt; select user,host from user;&lt;br /&gt;
 &lt;br /&gt;
 MariaDB [mysql]&amp;gt; update user set host = &amp;lsquo;%&amp;rsquo; where user = &amp;lsquo;root&amp;rsquo; and host = &amp;lsquo;localhost&amp;rsquo;;&lt;br /&gt;
 ＃更改“mysql”数据库里的“user”表里的“host”项，从“localhost”改为“%”
-　&lt;br /&gt;
+　
 Query OK, 1 row affected (0.00 sec)&lt;br /&gt;
 Rows matched: 1  Changed: 1  Warnings: 0&lt;br /&gt;
 &lt;br /&gt;

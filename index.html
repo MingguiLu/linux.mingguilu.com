@@ -161,9 +161,9 @@
             </a>
 
             <header class="article-header">
-    <a href="http://linux.mingguilu.com/2017/02/17/ubuntu%E5%AE%89%E8%A3%85%E5%BC%80%E6%BA%90%E7%89%88%E7%A6%85%E9%81%93" class="permalink">
+    <a href="http://linux.mingguilu.com/2017/02/17/ubuntu%E4%BD%BF%E7%94%A8%E6%BA%90%E7%A0%81%E5%8C%85%E5%AE%89%E8%A3%85%E7%A6%85%E9%81%93%E5%BC%80%E6%BA%90%E7%89%88" class="permalink">
     <h1 class="article-title" itemprop="name">
-        Ubuntu安装开源版禅道
+        Ubuntu使用源码包安装禅道开源版
     </h1>
     </a>
 	<time datetime="2017-02-17 22:48:12 &#43;0800 CST" itemprop="datePublished">2017-02-17</time>
@@ -217,7 +217,7 @@
                     1. 搭建LAMP环境 上一篇文档，已经在Ubuntu server 16.04 上使用apt搭建了LAMP环境，本文在此基础上使用源码包安装禅道9.0.1开源版 ２. 下载并解压禅道源码包 安装zip、unzip软件 sudo apt install -y zip unzip #### 下载禅道9.0.1开源版源码包 wget http://dl.cnezsoft.com/zentao/9.0.1/ZenTaoPMS.9.0.1.zip 解压缩源码包 unzip ZenTaoPMS.9.0.1.zip 将解压后的源码目录拷贝到apache网站根目录 sudo cp -rvf zentaopms/ /var/www/html/ $ ls /var/www/html/zentaopms/ bin config db doc framework lib module tmp VERSION www ３. 安装禅道 在浏览器访问 http://server-ip/zentaopms/www/index.php，进入安装页面 点击“开始安装”，阅读并同意授权协议 系统检查，两项未通过 根据图提示修复临时文件目录和上传文件目录的权限 chmod o=rwx -R /var/www/html/zentaopms/tmp/ chmod o=rwx -R /var/www/html/zentaopms/www/data 刷新系统检查，全部通过 输入数据库root密码，生成配置文件 保存配置文件 根据提示拷贝文本框中的配置内容，保存到&rdquo; /var/www/html/zentaopms/config/my.php &ldquo;中 $ sudo vim /var/www/html/zentaopms/config/my.php $ cat /var/www/html/zentaopms/config/my.php &lt;?php $config-&gt;installed = true; $config-&gt;debug = false; $config-&gt;requestType = 'GET'; $config-&gt;db-&gt;host = '127.0.0.1'; $config-&gt;db-&gt;port = '3306'; $config-&gt;db-&gt;name = 'zentao'; $config-&gt;db-&gt;user = 'root'; $config-&gt;db-&gt;password = 'passwd123!'; $config-&gt;db-&gt;prefix = 'zt_'; $config-&gt;webRoot = getWebRoot(); $config-&gt;default-&gt;lang = 'zh-cn'; 设置帐号 安装成功 正式登录禅道管理系统之前，为了安全起见，必须删除install.php和upgrade.php $ pwd /var/www/html/zentaopms/www/ $ sudo rm -rvf install.php upgrade.php 已删除'install.php' 已删除'upgrade.php' 登录禅道管理系统 登录成功 常见问题FQA １. ...
                 </p>
                 <p class="article-more-link">
-                    <a href="http://linux.mingguilu.com/2017/02/17/ubuntu%E5%AE%89%E8%A3%85%E5%BC%80%E6%BA%90%E7%89%88%E7%A6%85%E9%81%93">
+                    <a href="http://linux.mingguilu.com/2017/02/17/ubuntu%E4%BD%BF%E7%94%A8%E6%BA%90%E7%A0%81%E5%8C%85%E5%AE%89%E8%A3%85%E7%A6%85%E9%81%93%E5%BC%80%E6%BA%90%E7%89%88">
 			    Read more
 			    
                     </a>
@@ -337,7 +337,7 @@
             
 	    <li>
 		    
-		<a href="http://linux.mingguilu.com/2017/02/17/ubuntu%E5%AE%89%E8%A3%85%E5%BC%80%E6%BA%90%E7%89%88%E7%A6%85%E9%81%93" class="move">Ubuntu安装开源版禅道</a>
+		<a href="http://linux.mingguilu.com/2017/02/17/ubuntu%E4%BD%BF%E7%94%A8%E6%BA%90%E7%A0%81%E5%8C%85%E5%AE%89%E8%A3%85%E7%A6%85%E9%81%93%E5%BC%80%E6%BA%90%E7%89%88" class="move">Ubuntu使用源码包安装禅道开源版</a>
 
             </li>
             
