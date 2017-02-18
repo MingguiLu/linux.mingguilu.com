@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Zbox on Linux</title>
+    <link>http://linux.mingguilu.com/tags/zbox/</link>
+    <description>Recent content in Zbox on Linux</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Sat, 18 Feb 2017 14:17:37 +0800</lastBuildDate>
+    <atom:link href="http://linux.mingguilu.com/tags/zbox/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Ubuntu使用一键安装包安装禅道开源版</title>
+      <link>http://linux.mingguilu.com/2017/02/18/ubuntu%E4%BD%BF%E7%94%A8%E4%B8%80%E9%94%AE%E5%AE%89%E8%A3%85%E5%8C%85%E5%AE%89%E8%A3%85%E7%A6%85%E9%81%93%E5%BC%80%E6%BA%90%E7%89%88</link>
+      <pubDate>Sat, 18 Feb 2017 14:17:37 +0800</pubDate>
+      
+      <guid>http://linux.mingguilu.com/2017/02/18/ubuntu%E4%BD%BF%E7%94%A8%E4%B8%80%E9%94%AE%E5%AE%89%E8%A3%85%E5%8C%85%E5%AE%89%E8%A3%85%E7%A6%85%E9%81%93%E5%BC%80%E6%BA%90%E7%89%88</guid>
+      <description>
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;相比&lt;a href=&#34;http://linux.mingguilu.com/2017/02/16/ubuntu%E4%BD%BF%E7%94%A8apt%E6%90%AD%E5%BB%BAlamp/&#34;&gt;搭建LAMP环境&lt;/a&gt;&lt;a href=&#34;http://linux.mingguilu.com/2017/02/17/ubuntu%E4%BD%BF%E7%94%A8%E6%BA%90%E7%A0%81%E5%8C%85%E5%AE%89%E8%A3%85%E7%A6%85%E9%81%93%E5%BC%80%E6%BA%90%E7%89%88/&#34;&gt;使用源码包安装禅道&lt;/a&gt;，使用Linux一键安装包则简单很多&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h3 id=&#34;1-下载并安装-linux-64位一键安装包-http-www-zentao-net-download-80025-html:bc60e6351e871c8f3736c4ed6613e491&#34;&gt;1. 下载并安装&lt;a href=&#34;http://www.zentao.net/download/80025.html&#34;&gt;Linux 64位一键安装包&lt;/a&gt;&lt;/h3&gt;
+
+&lt;p&gt;下载&lt;a href=&#34;http://dl.cnezsoft.com/zentao/9.0.1/ZenTaoPMS.9.0.1.zbox_64.tar.gz&#34;&gt;禅道9.0.1版本Linux 64位一键安装包&lt;/a&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ wget http://dl.cnezsoft.com/zentao/9.0.1/ZenTaoPMS.9.0.1.zbox_64.tar.gz
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;直接将安装包解压缩到/opt目录下，即安装完成&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ sudo tar -zxvf ZenTaoPMS.9.0.1.zbox_64.tar.gz -C /opt/
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;2-使用zbox命令管理apache和ｍysql服务:bc60e6351e871c8f3736c4ed6613e491&#34;&gt;2. 使用zbox命令管理Apache和Ｍysql服务&lt;/h3&gt;
+
+&lt;p&gt;获取zbox命令的帮助&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ sudo /opt/zbox/zbox -h
+Usage: zbox.php {start|stop|restart|status}
+
+Options:
+    -h --help Show help.
+    -ap --aport Apache port, default 80　　# 修改Apache服务端口号
+    -mp --mport Mysql port, default 3306　# 修改Mysql服务端口号
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;开启Apache和Ｍysql服务&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ sudo /opt/zbox/zbox start 
+Start Apache success
+Start Mysql success
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;重启Apache和Ｍysql服务&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ sudo /opt/zbox/zbox restart
+Retart Apache success
+Retart Mysql success
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;停止Apache和Ｍysql服务&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ sudo /opt/zbox/zbox stop
+Stop Apache success
+Stop Mysql success
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;查看Apache和Ｍysql服务状态&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ sudo /opt/zbox/zbox status
+Apache is not running
+Mysql is not running
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;开启Apache和Ｍysql服务后，在浏览器访问禅道管理系统&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;http://server-ip
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://linux.mingguilu.com/images/170218_01_02_01.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;进入“开源版”登录界面，默认帐号：admin，密码：123456&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://linux.mingguilu.com/images/170218_01_02_02.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;登录成功&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://linux.mingguilu.com/images/170218_01_02_03.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;3-访问数据库:bc60e6351e871c8f3736c4ed6613e491&#34;&gt;3. 访问数据库&lt;/h3&gt;
+
+&lt;h4 id=&#34;网页登录数据库:bc60e6351e871c8f3736c4ed6613e491&#34;&gt;网页登录数据库&lt;/h4&gt;
+
+&lt;p&gt;数据库管理用的是adminer，为了安全，访问adminer的时候需要身份验证，需要运行/opt/zbox/auth/adduser.sh来添加用户&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;在普通用户下&lt;/p&gt;
+
+&lt;p&gt;$ sudo ./adduser.sh&lt;br /&gt;
+This tool is used to add user to access adminer&lt;br /&gt;
+Account: adminer1  passwd123!　　# 设置用户名和密码&lt;br /&gt;
+./adduser.sh: 3: read: Illegal option -s&lt;br /&gt;
+Adding password for user adminer1&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;在root用户下&lt;/p&gt;
+
+&lt;p&gt;＃ cd /opt/zbox/auth/&lt;br /&gt;
+＃ ./adduser.sh&lt;br /&gt;
+This tool is used to add user to access adminer&lt;br /&gt;
+Account: adminer2　　＃ 设置用户名&lt;br /&gt;
+Password: 　　　　　＃ 设置密码(隐式)&lt;br /&gt;
+Adding password for user adminer2&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;在访问禅道管理系统时，点击右下角的“数据库管理”&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://linux.mingguilu.com/images/170218_01_03_01.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;adminer身份验证&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://linux.mingguilu.com/images/170218_01_03_02.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;验证通过进入数据web管理台&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://linux.mingguilu.com/images/170218_01_03_03.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;h4 id=&#34;命令行连接数据库:bc60e6351e871c8f3736c4ed6613e491&#34;&gt;命令行连接数据库&lt;/h4&gt;
+
+&lt;p&gt;登录数据库，默认帐号:root，密码为空&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;/opt/zbox/bin/mysql -u root -P mysql端口 -p 
+
+$ /opt/zbox/bin/mysql -uroot -p　　# 使用默认的3306端口，可省略`-P`参数
+Enter password: 　　　# 密码为空
+Welcome to the MySQL monitor.  Commands end with ; or \g.
+Your MySQL connection id is 58
+Server version: 5.5.45 Source distribution
+
+Copyright (c) 2000, 2015, Oracle and/or its affiliates. All rights reserved.
+
+Oracle is a registered trademark of Oracle Corporation and/or its
+affiliates. Other names may be trademarks of their respective
+owners.
+
+Type &#39;help;&#39; or &#39;\h&#39; for help. Type &#39;\c&#39; to clear the current input statement.
+
+mysql&amp;gt; 
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h3 id=&#34;常见问题fqa:bc60e6351e871c8f3736c4ed6613e491&#34;&gt;常见问题FQA&lt;/h3&gt;
+
+&lt;h4 id=&#34;1-如果服务器上已经搭建了lamp环境-80端口和3306端口被占用了-无法启动:bc60e6351e871c8f3736c4ed6613e491&#34;&gt;1.  如果服务器上已经搭建了LAMP环境，80端口和3306端口被占用了，无法启动&lt;/h4&gt;
+
+&lt;pre&gt;&lt;code&gt;$ sudo /opt/zbox/zbox start
+(98)Address already in use: AH00073: make_sock: unable to listen for connections on address 0.0.0.0:80
+no listening sockets available, shutting down
+AH00015: Unable to open logs
+Start Apache fail. You can see the log /opt/zbox/logs/apache_error.log
+Start Mysql fail. You can see the log /opt/zbox/logs/mysql_error.log
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;解决方法：&lt;/p&gt;
+
+&lt;p&gt;修改Apache端口&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ sudo /opt/zbox/zbox -ap 8080
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;修改Mysql端口&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ sudo /opt/zbox/zbox -mp 3308
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;在浏览器访问禅道管理系统时指定端口号&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;http://server-ip:8080
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;em&gt;参考文档&lt;/em&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.zentao.net/book/zentaopmshelp/90.html&#34;&gt;linux用一键安装包&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

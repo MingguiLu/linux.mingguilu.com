@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    
+    <title>Ubuntu使用一键安装包安装禅道开源版</title>
+    <meta name="generator" content="Hugo 0.16-DEV" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    
+    
+    <link rel="icon" href="http://linux.mingguilu.com/favicon.ico">
+    <link rel="apple-touch-icon" href="http://linux.mingguilu.com/css/images/apple-touch-icon.png" />
+    <link rel="stylesheet" href="http://linux.mingguilu.com/css/style.css">
+    <link rel="stylesheet" href="http://linux.mingguilu.com/css/monokai.css">
+    <link rel="stylesheet" href="http://linux.mingguilu.com/fancybox/jquery.fancybox.css">
+    <link rel="stylesheet" href="http://linux.mingguilu.com/font/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="http://linux.mingguilu.com/font/icomoon/css/icomoon.css">
+    <link rel="stylesheet" href="http://linux.mingguilu.com/css/font.css">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400italic,400,600' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Source+Code+Pro' rel='stylesheet' type='text/css'>
+    <meta property="og:title" content="Ubuntu使用一键安装包安装禅道开源版" />
+<meta property="og:description" content="相比搭建LAMP环境使用源码包安装禅道，使用Linux一键安装包则简单很多 1. 下载并安装Linux 64位一键安装包 下载禅道9.0.1版本Linux 64位一键安装包 $ wget http://dl.cnezsoft.com/zentao/9.0.1/ZenTaoPMS.9.0.1.zbox_64.tar.gz 直接将安装包解压缩到/opt目录下，即安装完成 $ sudo tar -zxvf ZenTaoPMS.9.0.1.zbox_64.tar.gz -C /opt/ 2. 使用zbox命令管理Apache和Ｍysql服务 获取zbox命令的帮助 $ sudo /opt/zbox/zbox -h Usage: zbox.php {start|stop|restart|status} Options: -h --help Show help. -ap --aport Apache port, default 80 # 修改Apache服务端口号 -mp --mport Mysql port, default 3306 # 修改Mysql服务端口号 开启Apache和Ｍysql服务 $ sudo /opt/zbox/zbox start Start Apache success Start Mysql success 重启Apache和Ｍysql服务 $ sudo /opt/zbox/zbox restart Retart Apache success Retart Mysql success 停止Apache和Ｍysql服务 $ sudo /opt/zbox/zbox stop Stop Apache success Stop Mysql success 查看Apache和Ｍysql服务状态 $ sudo /opt/zbox/zbox status Apache is not running Mysql is not running 开启Apache和Ｍysql服务后，在浏览器访问禅道管理系统 http://server-ip 进入“开源版”登录界面，默认帐号：admin，密码：123456 登录成功 3." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://linux.mingguilu.com/2017/02/18/ubuntu%E4%BD%BF%E7%94%A8%E4%B8%80%E9%94%AE%E5%AE%89%E8%A3%85%E5%8C%85%E5%AE%89%E8%A3%85%E7%A6%85%E9%81%93%E5%BC%80%E6%BA%90%E7%89%88" />
+
+
+<meta property="og:updated_time" content="2017-02-18T14:17:37&#43;08:00"/>
+
+
+
+
+
+
+
+
+
+
+    
+    
+<meta itemprop="name" content="Ubuntu使用一键安装包安装禅道开源版">
+<meta itemprop="description" content="相比搭建LAMP环境使用源码包安装禅道，使用Linux一键安装包则简单很多 1. 下载并安装Linux 64位一键安装包 下载禅道9.0.1版本Linux 64位一键安装包 $ wget http://dl.cnezsoft.com/zentao/9.0.1/ZenTaoPMS.9.0.1.zbox_64.tar.gz 直接将安装包解压缩到/opt目录下，即安装完成 $ sudo tar -zxvf ZenTaoPMS.9.0.1.zbox_64.tar.gz -C /opt/ 2. 使用zbox命令管理Apache和Ｍysql服务 获取zbox命令的帮助 $ sudo /opt/zbox/zbox -h Usage: zbox.php {start|stop|restart|status} Options: -h --help Show help. -ap --aport Apache port, default 80 # 修改Apache服务端口号 -mp --mport Mysql port, default 3306 # 修改Mysql服务端口号 开启Apache和Ｍysql服务 $ sudo /opt/zbox/zbox start Start Apache success Start Mysql success 重启Apache和Ｍysql服务 $ sudo /opt/zbox/zbox restart Retart Apache success Retart Mysql success 停止Apache和Ｍysql服务 $ sudo /opt/zbox/zbox stop Stop Apache success Stop Mysql success 查看Apache和Ｍysql服务状态 $ sudo /opt/zbox/zbox status Apache is not running Mysql is not running 开启Apache和Ｍysql服务后，在浏览器访问禅道管理系统 http://server-ip 进入“开源版”登录界面，默认帐号：admin，密码：123456 登录成功 3.">
+
+
+<meta itemprop="dateModified" content="2017-02-18T14:17:37&#43;08:00" />
+<meta itemprop="wordCount" content="316">
+
+
+
+<meta itemprop="keywords" content="ubuntu,apache,lamp,mariadb,php,phpmyadmin,ubuntu16.04,zbox,zentao,禅道," />
+
+    
+
+  <meta name="twitter:card" content="summary"/>
+
+
+
+<meta name="twitter:title" content="Ubuntu使用一键安装包安装禅道开源版"/>
+<meta name="twitter:description" content="相比搭建LAMP环境使用源码包安装禅道，使用Linux一键安装包则简单很多 1. 下载并安装Linux 64位一键安装包 下载禅道9.0.1版本Linux 64位一键安装包 $ wget http://dl.cnezsoft.com/zentao/9.0.1/ZenTaoPMS.9.0.1.zbox_64.tar.gz 直接将安装包解压缩到/opt目录下，即安装完成 $ sudo tar -zxvf ZenTaoPMS.9.0.1.zbox_64.tar.gz -C /opt/ 2. 使用zbox命令管理Apache和Ｍysql服务 获取zbox命令的帮助 $ sudo /opt/zbox/zbox -h Usage: zbox.php {start|stop|restart|status} Options: -h --help Show help. -ap --aport Apache port, default 80 # 修改Apache服务端口号 -mp --mport Mysql port, default 3306 # 修改Mysql服务端口号 开启Apache和Ｍysql服务 $ sudo /opt/zbox/zbox start Start Apache success Start Mysql success 重启Apache和Ｍysql服务 $ sudo /opt/zbox/zbox restart Retart Apache success Retart Mysql success 停止Apache和Ｍysql服务 $ sudo /opt/zbox/zbox stop Stop Apache success Stop Mysql success 查看Apache和Ｍysql服务状态 $ sudo /opt/zbox/zbox status Apache is not running Mysql is not running 开启Apache和Ｍysql服务后，在浏览器访问禅道管理系统 http://server-ip 进入“开源版”登录界面，默认帐号：admin，密码：123456 登录成功 3."/>
+
+
+
+    <script src="http://linux.mingguilu.com/bower_components/jquery/dist/jquery-2.2.0.min.js "></script>
+    
+    <script src="http://linux.mingguilu.com/fancybox/jquery.fancybox.pack.js"></script>
+    <script src="http://linux.mingguilu.com/js/script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.8.0/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+
+    
+    <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        inlineMath: [['$','$'], ['\\(','\\)']]}
+      });
+    </script>
+    <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+    
+    <script src="http://linux.mingguilu.com/js/jquery.hotkeys.js "></script>
+
+    
+    <link rel="stylesheet" href="http://linux.mingguilu.com/bower_components/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="http://linux.mingguilu.com/bower_components/bootstrap/css/dropdowns-enhancement.css">
+    <script src="http://linux.mingguilu.com/bower_components/bootstrap/js/bootstrap.min.js"></script>
+    <script src="http://linux.mingguilu.com/bower_components/bootstrap/js/dropdowns-enhancement.js"></script>
+    <link rel="stylesheet" href="http://linux.mingguilu.com/css/bootstrap.css">
+
+    
+    <link href="http://linux.mingguilu.com/bower_components/talaria/dist/talaria.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="http://linux.mingguilu.com/bower_components/bluebird/js/browser/bluebird.js"></script>
+    <script type="text/javascript" src="http://linux.mingguilu.com/bower_components/talaria/dist/talaria.js"></script>
+
+    
+    
+
+</head>
+<body>
+<div class="container">
+
+<header id="header">
+  <div id="header-main" class="header-inner">
+    <div class="outer">
+
+	<nav class="navbar navbar-default">
+	  <div class="container-fluid">
+
+    <div class="navbar-header">
+		
+	<h1>
+		<a class="navbar-brand" href="http://linux.mingguilu.com/">
+			<ul class="logo">
+				<li><img src="/css/images/linux.jpg" width="50px" height="50px" class="logo-img"></li>
+				<li><span class="site-title-arch">Linux</span></li>
+			</ul>
+			
+			
+			
+			
+		</a>
+	</h1>
+</div>
+
+
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav navbar-right">
+    
+        <li><a href="/">主页</a></li>
+        <li><a href="/categories/">分类</a></li>
+        <li><a href="/tags/">标签</a></li>
+        
+        <li><a href="/about">关于</a></li>
+
+          <form class="navbar-form navbar-left" role="search" action="#" method="get">
+        <input type="hidden" value="archlinux.org">
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="Package Search" name="q">
+        </div>
+        <button type="submit" class="btn btn-default"><i class="fa fa-search"></i></button>
+      </form>
+
+      </ul>
+    </div>
+
+  </div>
+</nav>
+
+</header>
+
+
+<div id="container">
+   <div class="outer">
+    <section id="main">
+    <article>
+        <div class="article-inner">
+            
+
+            <header class="article-header">
+    <a href="http://linux.mingguilu.com/2017/02/18/ubuntu%E4%BD%BF%E7%94%A8%E4%B8%80%E9%94%AE%E5%AE%89%E8%A3%85%E5%8C%85%E5%AE%89%E8%A3%85%E7%A6%85%E9%81%93%E5%BC%80%E6%BA%90%E7%89%88" class="permalink">
+    <h1 class="article-title" itemprop="name">
+        Ubuntu使用一键安装包安装禅道开源版
+    </h1>
+    </a>
+	<time datetime="2017-02-18 14:17:37 &#43;0800 CST" itemprop="datePublished">2017-02-18</time>
+
+        <div class="article-date">
+		<i class="fa fa-calendar"></i>
+            <time datetime="2017-02-18 14:17:37 &#43;0800 CST" itemprop="datePublished">2017-02-18</time>
+            &middot;
+            316
+            words
+            &middot;
+            2
+            minute read
+        </div>
+	<br>
+
+    <div class="article-meta">
+
+        
+        
+        <div class="article-category">
+            <i class="fa fa-folder"></i>
+            
+            <a class="article-category-link" href="http://linux.mingguilu.com/categories/ubuntu">Ubuntu</a>
+            
+            
+        </div>
+        
+        
+        
+        <div class="article-category">
+		<i class="fa fa-chevron-right"></i>
+		
+            
+            <a class="article-category-link" href="http://linux.mingguilu.com/tags/%e7%a6%85%e9%81%93">禅道</a>
+            , 
+            
+            <a class="article-category-link" href="http://linux.mingguilu.com/tags/zentao">zentao</a>
+            , 
+            
+            <a class="article-category-link" href="http://linux.mingguilu.com/tags/zbox">zbox</a>
+            
+            
+        </div>
+        
+    </div>
+</header>
+
+            <div class="article-entry" itemprop="articleBody">
+                
+
+<p><br /></p>
+
+<blockquote>
+<p>相比<a href="http://linux.mingguilu.com/2017/02/16/ubuntu%E4%BD%BF%E7%94%A8apt%E6%90%AD%E5%BB%BAlamp/">搭建LAMP环境</a><a href="http://linux.mingguilu.com/2017/02/17/ubuntu%E4%BD%BF%E7%94%A8%E6%BA%90%E7%A0%81%E5%8C%85%E5%AE%89%E8%A3%85%E7%A6%85%E9%81%93%E5%BC%80%E6%BA%90%E7%89%88/">使用源码包安装禅道</a>，使用Linux一键安装包则简单很多</p>
+</blockquote>
+
+<h3 id="1-下载并安装-linux-64位一键安装包-http-www-zentao-net-download-80025-html:bc60e6351e871c8f3736c4ed6613e491">1. 下载并安装<a href="http://www.zentao.net/download/80025.html">Linux 64位一键安装包</a></h3>
+
+<p>下载<a href="http://dl.cnezsoft.com/zentao/9.0.1/ZenTaoPMS.9.0.1.zbox_64.tar.gz">禅道9.0.1版本Linux 64位一键安装包</a></p>
+
+<pre><code>$ wget http://dl.cnezsoft.com/zentao/9.0.1/ZenTaoPMS.9.0.1.zbox_64.tar.gz
+</code></pre>
+
+<p>直接将安装包解压缩到/opt目录下，即安装完成</p>
+
+<pre><code>$ sudo tar -zxvf ZenTaoPMS.9.0.1.zbox_64.tar.gz -C /opt/
+</code></pre>
+
+<h3 id="2-使用zbox命令管理apache和ｍysql服务:bc60e6351e871c8f3736c4ed6613e491">2. 使用zbox命令管理Apache和Ｍysql服务</h3>
+
+<p>获取zbox命令的帮助</p>
+
+<pre><code>$ sudo /opt/zbox/zbox -h
+Usage: zbox.php {start|stop|restart|status}
+
+Options:
+    -h --help Show help.
+    -ap --aport Apache port, default 80　　# 修改Apache服务端口号
+    -mp --mport Mysql port, default 3306　# 修改Mysql服务端口号
+</code></pre>
+
+<p>开启Apache和Ｍysql服务</p>
+
+<pre><code>$ sudo /opt/zbox/zbox start 
+Start Apache success
+Start Mysql success
+</code></pre>
+
+<p>重启Apache和Ｍysql服务</p>
+
+<pre><code>$ sudo /opt/zbox/zbox restart
+Retart Apache success
+Retart Mysql success
+</code></pre>
+
+<p>停止Apache和Ｍysql服务</p>
+
+<pre><code>$ sudo /opt/zbox/zbox stop
+Stop Apache success
+Stop Mysql success
+</code></pre>
+
+<p>查看Apache和Ｍysql服务状态</p>
+
+<pre><code>$ sudo /opt/zbox/zbox status
+Apache is not running
+Mysql is not running
+</code></pre>
+
+<p>开启Apache和Ｍysql服务后，在浏览器访问禅道管理系统</p>
+
+<pre><code>http://server-ip
+</code></pre>
+
+<p><img src="/images/170218_01_02_01.png" alt="" /></p>
+
+<p>进入“开源版”登录界面，默认帐号：admin，密码：123456</p>
+
+<p><img src="/images/170218_01_02_02.png" alt="" /></p>
+
+<p>登录成功</p>
+
+<p><img src="/images/170218_01_02_03.png" alt="" /></p>
+
+<h3 id="3-访问数据库:bc60e6351e871c8f3736c4ed6613e491">3. 访问数据库</h3>
+
+<h4 id="网页登录数据库:bc60e6351e871c8f3736c4ed6613e491">网页登录数据库</h4>
+
+<p>数据库管理用的是adminer，为了安全，访问adminer的时候需要身份验证，需要运行/opt/zbox/auth/adduser.sh来添加用户</p>
+
+<ul>
+<li><p>在普通用户下</p>
+
+<p>$ sudo ./adduser.sh<br />
+This tool is used to add user to access adminer<br />
+Account: adminer1  passwd123!　　# 设置用户名和密码<br />
+./adduser.sh: 3: read: Illegal option -s<br />
+Adding password for user adminer1</p></li>
+
+<li><p>在root用户下</p>
+
+<p>＃ cd /opt/zbox/auth/<br />
+＃ ./adduser.sh<br />
+This tool is used to add user to access adminer<br />
+Account: adminer2　　＃ 设置用户名<br />
+Password: 　　　　　＃ 设置密码(隐式)<br />
+Adding password for user adminer2</p></li>
+</ul>
+
+<p>在访问禅道管理系统时，点击右下角的“数据库管理”</p>
+
+<p><img src="/images/170218_01_03_01.png" alt="" /></p>
+
+<p>adminer身份验证</p>
+
+<p><img src="/images/170218_01_03_02.png" alt="" /></p>
+
+<p>验证通过进入数据web管理台</p>
+
+<p><img src="/images/170218_01_03_03.png" alt="" /></p>
+
+<h4 id="命令行连接数据库:bc60e6351e871c8f3736c4ed6613e491">命令行连接数据库</h4>
+
+<p>登录数据库，默认帐号:root，密码为空</p>
+
+<pre><code>/opt/zbox/bin/mysql -u root -P mysql端口 -p 
+
+$ /opt/zbox/bin/mysql -uroot -p　　# 使用默认的3306端口，可省略`-P`参数
+Enter password: 　　　# 密码为空
+Welcome to the MySQL monitor.  Commands end with ; or \g.
+Your MySQL connection id is 58
+Server version: 5.5.45 Source distribution
+
+Copyright (c) 2000, 2015, Oracle and/or its affiliates. All rights reserved.
+
+Oracle is a registered trademark of Oracle Corporation and/or its
+affiliates. Other names may be trademarks of their respective
+owners.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+mysql&gt; 
+</code></pre>
+
+<p><br /></p>
+
+<hr />
+
+<h3 id="常见问题fqa:bc60e6351e871c8f3736c4ed6613e491">常见问题FQA</h3>
+
+<h4 id="1-如果服务器上已经搭建了lamp环境-80端口和3306端口被占用了-无法启动:bc60e6351e871c8f3736c4ed6613e491">1.  如果服务器上已经搭建了LAMP环境，80端口和3306端口被占用了，无法启动</h4>
+
+<pre><code>$ sudo /opt/zbox/zbox start
+(98)Address already in use: AH00073: make_sock: unable to listen for connections on address 0.0.0.0:80
+no listening sockets available, shutting down
+AH00015: Unable to open logs
+Start Apache fail. You can see the log /opt/zbox/logs/apache_error.log
+Start Mysql fail. You can see the log /opt/zbox/logs/mysql_error.log
+</code></pre>
+
+<p>解决方法：</p>
+
+<p>修改Apache端口</p>
+
+<pre><code>$ sudo /opt/zbox/zbox -ap 8080
+</code></pre>
+
+<p>修改Mysql端口</p>
+
+<pre><code>$ sudo /opt/zbox/zbox -mp 3308
+</code></pre>
+
+<p>在浏览器访问禅道管理系统时指定端口号</p>
+
+<pre><code>http://server-ip:8080
+</code></pre>
+
+<p><br /></p>
+
+<hr />
+
+<p><em>参考文档</em></p>
+
+<ul>
+<li><a href="http://www.zentao.net/book/zentaopmshelp/90.html">linux用一键安装包</a></li>
+</ul>
+
+            </div>
+
+            <footer class="article-footer">
+    
+    </a>
+    
+    
+</footer>
+
+        </div>
+
+        
+
+
+  <script type="text/javascript">
+   talaria.init({REPOSITORY_NAME: 'hugo-theme-arch',
+                 GITHUB_USERNAME: 'syui'});
+  </script>
+    </article>
+
+    <section id="comments">
+
+        <div id="disqus_thread">
+            
+        </div>
+    </section>
+</section>
+
+    <aside id="sidebar">
+    
+    
+    
+
+<div class="widget-wrap">
+    <div class="widget">
+        <ul id="recent-post">
+		<li id="first-recent">
+        <a href="sitemap.xml" id="firstmove" class="move">
+            <h3 class="widget-title">
+			           最新文档
+					
+            </h3>
+        </a>
+    </li>
+            
+	    <li>
+		    
+		<a href="http://linux.mingguilu.com/2017/02/18/ubuntu%E4%BD%BF%E7%94%A8%E4%B8%80%E9%94%AE%E5%AE%89%E8%A3%85%E5%8C%85%E5%AE%89%E8%A3%85%E7%A6%85%E9%81%93%E5%BC%80%E6%BA%90%E7%89%88" class="move">Ubuntu使用一键安装包安装禅道开源版</a>
+
+            </li>
+            
+	    <li>
+		    
+		<a href="http://linux.mingguilu.com/2017/02/17/ubuntu%E4%BD%BF%E7%94%A8%E6%BA%90%E7%A0%81%E5%8C%85%E5%AE%89%E8%A3%85%E7%A6%85%E9%81%93%E5%BC%80%E6%BA%90%E7%89%88" class="move">Ubuntu使用源码包安装禅道开源版</a>
+
+            </li>
+            
+	    <li>
+		    
+		<a href="http://linux.mingguilu.com/2017/02/16/ubuntu%E4%BD%BF%E7%94%A8apt%E6%90%AD%E5%BB%BAlamp" class="move">Ubuntu使用apt搭建LAMP</a>
+
+            </li>
+            
+        </ul>
+    </div>
+</div>
+
+
+    
+
+<div class="widget-wrap">
+    
+    <h3 class="widget-title">分类</h3>
+    <div class="widget">
+        <ul class="category-list">
+            
+            <li class="category-list-item">
+                <a class="category-list-link" href="http://linux.mingguilu.com/categories/ubuntu">
+                    ubuntu
+                </a>
+                <span class="category-list-count">3</span>
+            </li>
+            
+        </ul>
+    </div>
+</div>
+
+
+
+    
+
+<div class="widget-wrap">
+    
+    <h3 class="widget-title">标签</h3>
+    <div class="widget">
+        <ul class="category-list">
+            
+            <li class="category-list-item">
+                <a class="category-list-link" href="http://linux.mingguilu.com/tags/apache">
+                    apache
+                </a>
+                <span class="category-list-count">1</span>
+            </li>
+            
+            <li class="category-list-item">
+                <a class="category-list-link" href="http://linux.mingguilu.com/tags/lamp">
+                    lamp
+                </a>
+                <span class="category-list-count">1</span>
+            </li>
+            
+            <li class="category-list-item">
+                <a class="category-list-link" href="http://linux.mingguilu.com/tags/mariadb">
+                    mariadb
+                </a>
+                <span class="category-list-count">1</span>
+            </li>
+            
+            <li class="category-list-item">
+                <a class="category-list-link" href="http://linux.mingguilu.com/tags/php">
+                    php
+                </a>
+                <span class="category-list-count">1</span>
+            </li>
+            
+            <li class="category-list-item">
+                <a class="category-list-link" href="http://linux.mingguilu.com/tags/phpmyadmin">
+                    phpmyadmin
+                </a>
+                <span class="category-list-count">1</span>
+            </li>
+            
+            <li class="category-list-item">
+                <a class="category-list-link" href="http://linux.mingguilu.com/tags/ubuntu16.04">
+                    ubuntu16.04
+                </a>
+                <span class="category-list-count">2</span>
+            </li>
+            
+            <li class="category-list-item">
+                <a class="category-list-link" href="http://linux.mingguilu.com/tags/zbox">
+                    zbox
+                </a>
+                <span class="category-list-count">1</span>
+            </li>
+            
+            <li class="category-list-item">
+                <a class="category-list-link" href="http://linux.mingguilu.com/tags/zentao">
+                    zentao
+                </a>
+                <span class="category-list-count">2</span>
+            </li>
+            
+            <li class="category-list-item">
+                <a class="category-list-link" href="http://linux.mingguilu.com/tags/%e7%a6%85%e9%81%93">
+                    禅道
+                </a>
+                <span class="category-list-count">2</span>
+            </li>
+            
+        </ul>
+    </div>
+</div>
+
+
+
+    
+
+    
+</aside>
+
+</div>
+</div>
+
+<footer id="footer">
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      <p class="back_top"><a href="javascript:scroll(0,0)" target="_self"> <span class="icon icon-rocket"></span>回到顶部<span class="icon icon-rocket"></span> </a></p>
+	    &copy; 2017 <i class="fa fa-github"></i> <a href="https://github.com/mingguilu">MingguiLu</a>. <br>
+      Powered by <a href="//gohugo.io">Hugo</a>. Theme by <a href="https://github.com/syui/hugo-theme-arch">hugo-theme-arch</a>. Hosted by <a href="https://github.com">Github</a>.
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
