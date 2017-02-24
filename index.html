@@ -3,7 +3,7 @@
 <head>
     
     <title>Linux</title>
-    <meta name="generator" content="Hugo 0.16-DEV" />
+    <meta name="generator" content="Hugo 0.18.1" />
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     
@@ -28,7 +28,7 @@
 <meta property="og:url" content="http://linux.mingguilu.com/" />
 
 
-
+<meta property="og:updated_time" content="2017-02-23T21:14:26&#43;08:00"/>
 
 
 
@@ -161,6 +161,87 @@
             </a>
 
             <header class="article-header">
+    <a href="http://linux.mingguilu.com/2017/02/23/centos7%E4%BD%BF%E7%94%A8yum%E6%90%AD%E5%BB%BAsamba%E6%96%87%E4%BB%B6%E5%85%B1%E4%BA%AB" class="permalink">
+    <h1 class="article-title" itemprop="name">
+        CentOS7使用YUM搭建Samba文件共享
+    </h1>
+    </a>
+	<time datetime="2017-02-23 21:14:26 &#43;0800 CST" itemprop="datePublished">2017-02-23</time>
+
+        <div class="article-date">
+		<i class="fa fa-calendar"></i>
+            <time datetime="2017-02-23 21:14:26 &#43;0800 CST" itemprop="datePublished">2017-02-23</time>
+            &middot;
+            971
+            words
+            &middot;
+            5
+            minute read
+        </div>
+	<br>
+
+    <div class="article-meta">
+
+        
+        
+        <div class="article-category">
+            <i class="fa fa-folder"></i>
+            
+            <a class="article-category-link" href="http://linux.mingguilu.com/categories/centos">CentOS</a>
+            
+            
+        </div>
+        
+        
+        
+        <div class="article-category">
+		<i class="fa fa-chevron-right"></i>
+		
+            
+            <a class="article-category-link" href="http://linux.mingguilu.com/tags/centos7">CentOS7</a>
+            , 
+            
+            <a class="article-category-link" href="http://linux.mingguilu.com/tags/samba">Samba</a>
+            , 
+            
+            <a class="article-category-link" href="http://linux.mingguilu.com/tags/%e6%96%87%e4%bb%b6%e5%85%b1%e4%ba%ab">文件共享</a>
+            
+            
+        </div>
+        
+    </div>
+</header>
+
+            <div class="article-entry" itemprop="articleBody">
+                <p>
+                    1. 关于Samba Samba用于在Linux、UNIX和Windows之间提供安全、稳定、快速的文件和打印服务。
+Samba所需的软件包括：
+ Samba 服务器端软件包 Samba-client 客户端软件包 Samba-common Samba公共文件软件包  Samba有smbd和nmbd两个守护进程组成，两个进程的而启动脚本是独立的：
+ smbd服务进程 为客户端提供文件共享和打印机服务，还负责用户权限验证以及锁功能，默认监听端口TCP协议的139和445
+ nmbd服务进程 提供NetBIOS名称服务，以满足基于Common Internet File System (CIFS)协议的共享访问，默认使用UDP协议的137端口
+  2. 关闭防火墙和SELinux CentOS7防火墙与SELinux默认是开启状态，并拒绝远程用户对Samba的访问，需要暂时关闭。
+查看防火墙状态
+# systemctl status firewalld.service ● firewalld.service - firewalld - dynamic firewall daemon Loaded: loaded (/usr/lib/systemd/system/firewalld.service; enabled; vendor preset: enabled) Active: active (running) since 二 2016-10-18 00:23:15 CST; 38min ago Main PID: 843 (firewalld) CGroup: /system.slice/firewalld.service └─843 /usr/bin/python -Es /usr/sbin/firewalld --nofork --nopid 10月 18 00:23:15 localhost. ...
+                </p>
+                <p class="article-more-link">
+                    <a href="http://linux.mingguilu.com/2017/02/23/centos7%E4%BD%BF%E7%94%A8yum%E6%90%AD%E5%BB%BAsamba%E6%96%87%E4%BB%B6%E5%85%B1%E4%BA%AB">
+			    Read more
+			    
+                    </a>
+                </p>
+            </div>
+	    
+        </div>
+    </article>
+    
+    <article class="article article-type-post" itemscope="" itemprop="blogPost">
+
+	    <div class="article-inner">
+
+            
+            </a>
+
+            <header class="article-header">
     <a href="http://linux.mingguilu.com/2017/02/18/ubuntu%E4%BD%BF%E7%94%A8%E4%B8%80%E9%94%AE%E5%AE%89%E8%A3%85%E5%8C%85%E5%AE%89%E8%A3%85%E7%A6%85%E9%81%93%E5%BC%80%E6%BA%90%E7%89%88" class="permalink">
     <h1 class="article-title" itemprop="name">
         Ubuntu使用一键安装包安装禅道开源版
@@ -214,7 +295,13 @@
 
             <div class="article-entry" itemprop="articleBody">
                 <p>
-                    相比搭建LAMP环境使用源码包安装禅道，使用Linux一键安装包则简单很多 1. 下载并安装Linux 64位一键安装包 下载禅道9.0.1版本Linux 64位一键安装包 $ wget http://dl.cnezsoft.com/zentao/9.0.1/ZenTaoPMS.9.0.1.zbox_64.tar.gz 直接将安装包解压缩到/opt目录下，即安装完成 $ sudo tar -zxvf ZenTaoPMS.9.0.1.zbox_64.tar.gz -C /opt/ 2. 使用zbox命令管理Apache和Ｍysql服务 获取zbox命令的帮助 $ sudo /opt/zbox/zbox -h Usage: zbox.php {start|stop|restart|status} Options: -h --help Show help. -ap --aport Apache port, default 80 # 修改Apache服务端口号 -mp --mport Mysql port, default 3306 # 修改Mysql服务端口号 开启Apache和Ｍysql服务 $ sudo /opt/zbox/zbox start Start Apache success Start Mysql success 重启Apache和Ｍysql服务 $ sudo /opt/zbox/zbox restart Retart Apache success Retart Mysql success 停止Apache和Ｍysql服务 $ sudo /opt/zbox/zbox stop Stop Apache success Stop Mysql success 查看Apache和Ｍysql服务状态 $ sudo /opt/zbox/zbox status Apache is not running Mysql is not running 开启Apache和Ｍysql服务后，在浏览器访问禅道管理系统 http://server-ip 进入“开源版”登录界面，默认帐号：admin，密码：123456 登录成功 3. ...
+                    相比搭建LAMP环境使用源码包安装禅道，使用Linux一键安装包则简单很多
+ 1. 下载并安装Linux 64位一键安装包 下载禅道9.0.1版本Linux 64位一键安装包
+$ wget http://dl.cnezsoft.com/zentao/9.0.1/ZenTaoPMS.9.0.1.zbox_64.tar.gz  直接将安装包解压缩到/opt目录下，即安装完成
+$ sudo tar -zxvf ZenTaoPMS.9.0.1.zbox_64.tar.gz -C /opt/  2. 使用zbox命令管理Apache和Ｍysql服务 获取zbox命令的帮助
+$ sudo /opt/zbox/zbox -h Usage: zbox.php {start|stop|restart|status} Options: -h --help Show help. -ap --aport Apache port, default 80　# 修改Apache服务端口号 -mp --mport Mysql port, default 3306　# 修改Mysql服务端口号  开启Apache和Ｍysql服务
+$ sudo /opt/zbox/zbox start Start Apache success Start Mysql success  重启Apache和Ｍysql服务
+$ sudo /opt/zbox/zbox restart Retart Apache success Retart Mysql success  停止Apache和Ｍysql服务 ...
                 </p>
                 <p class="article-more-link">
                     <a href="http://linux.mingguilu.com/2017/02/18/ubuntu%E4%BD%BF%E7%94%A8%E4%B8%80%E9%94%AE%E5%AE%89%E8%A3%85%E5%8C%85%E5%AE%89%E8%A3%85%E7%A6%85%E9%81%93%E5%BC%80%E6%BA%90%E7%89%88">
@@ -288,7 +375,10 @@
 
             <div class="article-entry" itemprop="articleBody">
                 <p>
-                    1. 搭建LAMP环境 上一篇文档，已经在Ubuntu server 16.04 上使用apt搭建了LAMP环境，本文在此基础上使用源码包安装禅道9.0.1开源版 ２. 下载并解压禅道源码包 安装zip、unzip软件 sudo apt install -y zip unzip #### 下载禅道9.0.1开源版源码包 wget http://dl.cnezsoft.com/zentao/9.0.1/ZenTaoPMS.9.0.1.zip 解压缩源码包 unzip ZenTaoPMS.9.0.1.zip 将解压后的源码目录拷贝到apache网站根目录 sudo cp -rvf zentaopms/ /var/www/html/ $ ls /var/www/html/zentaopms/ bin config db doc framework lib module tmp VERSION www ３. 安装禅道 在浏览器访问 http://server-ip/zentaopms/www/index.php，进入安装页面 点击“开始安装”，阅读并同意授权协议 系统检查，两项未通过 根据图提示修复临时文件目录和上传文件目录的权限 chmod o=rwx -R /var/www/html/zentaopms/tmp/ chmod o=rwx -R /var/www/html/zentaopms/www/data 刷新系统检查，全部通过 输入数据库root密码，生成配置文件 保存配置文件 根据提示拷贝文本框中的配置内容，保存到&rdquo; /var/www/html/zentaopms/config/my.php &ldquo;中 $ sudo vim /var/www/html/zentaopms/config/my.php $ cat /var/www/html/zentaopms/config/my.php &lt;?php $config-&gt;installed = true; $config-&gt;debug = false; $config-&gt;requestType = 'GET'; $config-&gt;db-&gt;host = '127.0.0.1'; $config-&gt;db-&gt;port = '3306'; $config-&gt;db-&gt;name = 'zentao'; $config-&gt;db-&gt;user = 'root'; $config-&gt;db-&gt;password = 'passwd123!'; $config-&gt;db-&gt;prefix = 'zt_'; $config-&gt;webRoot = getWebRoot(); $config-&gt;default-&gt;lang = 'zh-cn'; 设置帐号 安装成功 正式登录禅道管理系统之前，为了安全起见，必须删除install.php和upgrade.php $ pwd /var/www/html/zentaopms/www/ $ sudo rm -rvf install.php upgrade.php 已删除'install.php' 已删除'upgrade.php' 登录禅道管理系统 登录成功 常见问题FQA １. ...
+                    1. 搭建LAMP环境 上一篇文档，已经在Ubuntu server 16.04 上使用apt搭建了LAMP环境，本文在此基础上使用源码包安装禅道9.0.1开源版
+２. 下载并解压禅道源码包 安装zip、unzip软件 sudo apt install -y zip unzip  ####　下载禅道9.0.1开源版源码包
+wget http://dl.cnezsoft.com/zentao/9.0.1/ZenTaoPMS.9.0.1.zip  解压缩源码包 unzip ZenTaoPMS.9.0.1.zip  将解压后的源码目录拷贝到apache网站根目录 sudo cp -rvf zentaopms/ /var/www/html/ $ ls /var/www/html/zentaopms/ bin config db doc framework lib module tmp VERSION www  ３. 安装禅道 在浏览器访问 http://server-ip/zentaopms/www/index.php，进入安装页面 点击“开始安装”，阅读并同意授权协议 系统检查，两项未通过 根据图提示修复临时文件目录和上传文件目录的权限 chmod o=rwx -R /var/www/html/zentaopms/tmp/ chmod o=rwx -R /var/www/html/zentaopms/www/data  刷新系统检查，全部通过 输入数据库root密码，生成配置文件 保存配置文件 根据提示拷贝文本框中的配置内容，保存到&rdquo; /var/www/html/zentaopms/config/my.php &ldquo;中
+$ sudo vim /var/www/html/zentaopms/config/my. ...
                 </p>
                 <p class="article-more-link">
                     <a href="http://linux.mingguilu.com/2017/02/17/ubuntu%E4%BD%BF%E7%94%A8%E6%BA%90%E7%A0%81%E5%8C%85%E5%AE%89%E8%A3%85%E7%A6%85%E9%81%93%E5%BC%80%E6%BA%90%E7%89%88">
@@ -371,7 +461,7 @@
 
             <div class="article-entry" itemprop="articleBody">
                 <p>
-                    １. Web服务Apache2 安装Apache2 $ sudo apt install -y apache2 查看apache2版本 $ sudo apache2 -v Server version: Apache/2.4.18 (Ubuntu) Server built: 2016-07-14T12:32:26 启动apache2.service $ sudo systemctl start apache2.service 停止apache2.service $ sudo systemctl stop apache2.service 查看apache2.service状态 $ sudo systemctl status apache2.service 在浏览器测试访问 http://server-ip 2. 数据库服务MariaDB 安装MariaDB $ sudo apt install -y mariadb-server mariadb-client 设置MariaDB root用户密码 $ sudo mysql_secure_installation Enter current password for root (enter for none): ＃ 输入当前的root密码：没有就直接回车 Set root password? [Y/n] y ＃是否设置密码：是 New password: ＃设置密码 Re-enter new password: ＃再次确认密码 Remove anonymous users? ...
+                    １. Web服务Apache2 安装Apache2 $ sudo apt install -y apache2  查看apache2版本 $ sudo apache2 -v Server version: Apache/2.4.18 (Ubuntu) Server built: 2016-07-14T12:32:26  启动apache2.service $ sudo systemctl start apache2.service  停止apache2.service $ sudo systemctl stop apache2.service  查看apache2.service状态 $ sudo systemctl status apache2.service  在浏览器测试访问 http://server-ip  2. 数据库服务MariaDB 安装MariaDB $ sudo apt install -y mariadb-server mariadb-client  设置MariaDB root用户密码 $ sudo mysql_secure_installation Enter current password for root (enter for none): ＃ 输入当前的root密码：没有就直接回车 Set root password? ...
                 </p>
                 <p class="article-more-link">
                     <a href="http://linux.mingguilu.com/2017/02/16/ubuntu%E4%BD%BF%E7%94%A8apt%E6%90%AD%E5%BB%BAlamp">
@@ -411,6 +501,12 @@
             
 	    <li>
 		    
+		<a href="http://linux.mingguilu.com/2017/02/23/centos7%E4%BD%BF%E7%94%A8yum%E6%90%AD%E5%BB%BAsamba%E6%96%87%E4%BB%B6%E5%85%B1%E4%BA%AB" class="move">CentOS7使用YUM搭建Samba文件共享</a>
+
+            </li>
+            
+	    <li>
+		    
 		<a href="http://linux.mingguilu.com/2017/02/18/ubuntu%E4%BD%BF%E7%94%A8%E4%B8%80%E9%94%AE%E5%AE%89%E8%A3%85%E5%8C%85%E5%AE%89%E8%A3%85%E7%A6%85%E9%81%93%E5%BC%80%E6%BA%90%E7%89%88" class="move">Ubuntu使用一键安装包安装禅道开源版</a>
 
             </li>
@@ -441,6 +537,13 @@
         <ul class="category-list">
             
             <li class="category-list-item">
+                <a class="category-list-link" href="http://linux.mingguilu.com/categories/centos">
+                    centos
+                </a>
+                <span class="category-list-count">1</span>
+            </li>
+            
+            <li class="category-list-item">
                 <a class="category-list-link" href="http://linux.mingguilu.com/categories/ubuntu">
                     ubuntu
                 </a>
@@ -464,6 +567,13 @@
             <li class="category-list-item">
                 <a class="category-list-link" href="http://linux.mingguilu.com/tags/apache">
                     apache
+                </a>
+                <span class="category-list-count">1</span>
+            </li>
+            
+            <li class="category-list-item">
+                <a class="category-list-link" href="http://linux.mingguilu.com/tags/centos7">
+                    centos7
                 </a>
                 <span class="category-list-count">1</span>
             </li>
@@ -497,6 +607,13 @@
             </li>
             
             <li class="category-list-item">
+                <a class="category-list-link" href="http://linux.mingguilu.com/tags/samba">
+                    samba
+                </a>
+                <span class="category-list-count">1</span>
+            </li>
+            
+            <li class="category-list-item">
                 <a class="category-list-link" href="http://linux.mingguilu.com/tags/ubuntu16.04">
                     ubuntu16.04
                 </a>
@@ -515,6 +632,13 @@
                     zentao
                 </a>
                 <span class="category-list-count">2</span>
+            </li>
+            
+            <li class="category-list-item">
+                <a class="category-list-link" href="http://linux.mingguilu.com/tags/%e6%96%87%e4%bb%b6%e5%85%b1%e4%ba%ab">
+                    文件共享
+                </a>
+                <span class="category-list-count">1</span>
             </li>
             
             <li class="category-list-item">
