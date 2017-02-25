@@ -2,11 +2,11 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Ubuntu16.04 on Linux</title>
-    <link>http://linux.mingguilu.com/tags/ubuntu16.04/index.xml</link>
+    <link>http://linux.mingguilu.com/tags/ubuntu16/index.04/</link>
     <description>Recent content in Ubuntu16.04 on Linux</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <copyright>Powered by [Hugo](//gohugo.io). Theme by [hugo-theme-arch](https://github.com/syui/hugo-theme-arch). Hosted by [Github](https://github.com).</copyright>
+    <lastBuildDate>Fri, 17 Feb 2017 22:48:12 +0800</lastBuildDate>
     <atom:link href="http://linux.mingguilu.com/tags/ubuntu16.04/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
@@ -17,13 +17,13 @@
       <guid>http://linux.mingguilu.com/2017/02/17/ubuntu%E4%BD%BF%E7%94%A8%E6%BA%90%E7%A0%81%E5%8C%85%E5%AE%89%E8%A3%85%E7%A6%85%E9%81%93%E5%BC%80%E6%BA%90%E7%89%88</guid>
       <description>
 
-&lt;h3 id=&#34;1-搭建lamp环境&#34;&gt;1. 搭建LAMP环境&lt;/h3&gt;
+&lt;h3 id=&#34;1-搭建lamp环境:77831f7a9680d8377ea1d87039e03612&#34;&gt;1. 搭建LAMP环境&lt;/h3&gt;
 
 &lt;p&gt;上一篇文档，已经&lt;a href=&#34;http://linux.mingguilu.com/2017/02/16/ubuntu%E4%BD%BF%E7%94%A8apt%E6%90%AD%E5%BB%BAlamp/&#34;&gt;在Ubuntu server 16.04 上使用apt搭建了LAMP环境&lt;/a&gt;，本文在此基础上使用源码包安装&lt;a href=&#34;http://www.zentao.net/download/80025.html&#34;&gt;禅道9.0.1开源版&lt;/a&gt;&lt;/p&gt;
 
-&lt;h3 id=&#34;２-下载并解压-禅道源码包-http-dl-cnezsoft-com-zentao-9-0-1-zentaopms-9-0-1-zip&#34;&gt;２. 下载并解压&lt;a href=&#34;http://dl.cnezsoft.com/zentao/9.0.1/ZenTaoPMS.9.0.1.zip&#34;&gt;禅道源码包&lt;/a&gt;&lt;/h3&gt;
+&lt;h3 id=&#34;２-下载并解压-禅道源码包-http-dl-cnezsoft-com-zentao-9-0-1-zentaopms-9-0-1-zip:77831f7a9680d8377ea1d87039e03612&#34;&gt;２. 下载并解压&lt;a href=&#34;http://dl.cnezsoft.com/zentao/9.0.1/ZenTaoPMS.9.0.1.zip&#34;&gt;禅道源码包&lt;/a&gt;&lt;/h3&gt;
 
-&lt;h4 id=&#34;安装zip-unzip软件&#34;&gt;安装zip、unzip软件&lt;/h4&gt;
+&lt;h4 id=&#34;安装zip-unzip软件:77831f7a9680d8377ea1d87039e03612&#34;&gt;安装zip、unzip软件&lt;/h4&gt;
 
 &lt;pre&gt;&lt;code&gt;sudo apt install -y zip unzip
 &lt;/code&gt;&lt;/pre&gt;
@@ -33,12 +33,12 @@
 &lt;pre&gt;&lt;code&gt;wget http://dl.cnezsoft.com/zentao/9.0.1/ZenTaoPMS.9.0.1.zip
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h4 id=&#34;解压缩源码包&#34;&gt;解压缩源码包&lt;/h4&gt;
+&lt;h4 id=&#34;解压缩源码包:77831f7a9680d8377ea1d87039e03612&#34;&gt;解压缩源码包&lt;/h4&gt;
 
 &lt;pre&gt;&lt;code&gt;unzip ZenTaoPMS.9.0.1.zip
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h4 id=&#34;将解压后的源码目录拷贝到apache网站根目录&#34;&gt;将解压后的源码目录拷贝到apache网站根目录&lt;/h4&gt;
+&lt;h4 id=&#34;将解压后的源码目录拷贝到apache网站根目录:77831f7a9680d8377ea1d87039e03612&#34;&gt;将解压后的源码目录拷贝到apache网站根目录&lt;/h4&gt;
 
 &lt;pre&gt;&lt;code&gt;sudo cp -rvf zentaopms/ /var/www/html/
 
@@ -46,36 +46,36 @@ $ ls /var/www/html/zentaopms/
 bin  config  db  doc  framework  lib  module  tmp  VERSION  www
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h3 id=&#34;３-安装禅道&#34;&gt;３. 安装禅道&lt;/h3&gt;
+&lt;h3 id=&#34;３-安装禅道:77831f7a9680d8377ea1d87039e03612&#34;&gt;３. 安装禅道&lt;/h3&gt;
 
-&lt;h4 id=&#34;在浏览器访问-http-server-ip-zentaopms-www-index-php-进入安装页面&#34;&gt;在浏览器访问 &lt;a href=&#34;http://server-ip/zentaopms/www/index.php，进入安装页面&#34;&gt;http://server-ip/zentaopms/www/index.php，进入安装页面&lt;/a&gt;&lt;/h4&gt;
+&lt;h4 id=&#34;在浏览器访问-http-server-ip-zentaopms-www-index-php-进入安装页面:77831f7a9680d8377ea1d87039e03612&#34;&gt;在浏览器访问 &lt;a href=&#34;http://server-ip/zentaopms/www/index.php，进入安装页面&#34;&gt;http://server-ip/zentaopms/www/index.php，进入安装页面&lt;/a&gt;&lt;/h4&gt;
 
 &lt;p&gt;&lt;img src=&#34;http://linux.mingguilu.com/images/170217_01_03_01.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
-&lt;h4 id=&#34;点击-开始安装-阅读并同意授权协议&#34;&gt;点击“开始安装”，阅读并同意授权协议&lt;/h4&gt;
+&lt;h4 id=&#34;点击-开始安装-阅读并同意授权协议:77831f7a9680d8377ea1d87039e03612&#34;&gt;点击“开始安装”，阅读并同意授权协议&lt;/h4&gt;
 
 &lt;p&gt;&lt;img src=&#34;http://linux.mingguilu.com/images/170217_01_03_02.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
-&lt;h4 id=&#34;系统检查-两项未通过&#34;&gt;系统检查，两项未通过&lt;/h4&gt;
+&lt;h4 id=&#34;系统检查-两项未通过:77831f7a9680d8377ea1d87039e03612&#34;&gt;系统检查，两项未通过&lt;/h4&gt;
 
 &lt;p&gt;&lt;img src=&#34;http://linux.mingguilu.com/images/170217_01_03_03.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
-&lt;h4 id=&#34;根据图提示修复临时文件目录和上传文件目录的权限&#34;&gt;根据图提示修复临时文件目录和上传文件目录的权限&lt;/h4&gt;
+&lt;h4 id=&#34;根据图提示修复临时文件目录和上传文件目录的权限:77831f7a9680d8377ea1d87039e03612&#34;&gt;根据图提示修复临时文件目录和上传文件目录的权限&lt;/h4&gt;
 
 &lt;pre&gt;&lt;code&gt;chmod o=rwx -R /var/www/html/zentaopms/tmp/
 
 chmod o=rwx -R /var/www/html/zentaopms/www/data
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h4 id=&#34;刷新系统检查-全部通过&#34;&gt;刷新系统检查，全部通过&lt;/h4&gt;
+&lt;h4 id=&#34;刷新系统检查-全部通过:77831f7a9680d8377ea1d87039e03612&#34;&gt;刷新系统检查，全部通过&lt;/h4&gt;
 
 &lt;p&gt;&lt;img src=&#34;http://linux.mingguilu.com/images/170217_01_03_04.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
-&lt;h4 id=&#34;输入数据库root密码-生成配置文件&#34;&gt;输入数据库root密码，生成配置文件&lt;/h4&gt;
+&lt;h4 id=&#34;输入数据库root密码-生成配置文件:77831f7a9680d8377ea1d87039e03612&#34;&gt;输入数据库root密码，生成配置文件&lt;/h4&gt;
 
 &lt;p&gt;&lt;img src=&#34;http://linux.mingguilu.com/images/170217_01_03_05.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
-&lt;h4 id=&#34;保存配置文件&#34;&gt;保存配置文件&lt;/h4&gt;
+&lt;h4 id=&#34;保存配置文件:77831f7a9680d8377ea1d87039e03612&#34;&gt;保存配置文件&lt;/h4&gt;
 
 &lt;p&gt;&lt;img src=&#34;http://linux.mingguilu.com/images/170217_01_03_06.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
@@ -98,15 +98,15 @@ $config-&amp;gt;webRoot         = getWebRoot();
 $config-&amp;gt;default-&amp;gt;lang   = &#39;zh-cn&#39;;
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h4 id=&#34;设置帐号&#34;&gt;设置帐号&lt;/h4&gt;
+&lt;h4 id=&#34;设置帐号:77831f7a9680d8377ea1d87039e03612&#34;&gt;设置帐号&lt;/h4&gt;
 
 &lt;p&gt;&lt;img src=&#34;http://linux.mingguilu.com/images/170217_01_03_07.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
-&lt;h4 id=&#34;安装成功&#34;&gt;安装成功&lt;/h4&gt;
+&lt;h4 id=&#34;安装成功:77831f7a9680d8377ea1d87039e03612&#34;&gt;安装成功&lt;/h4&gt;
 
 &lt;p&gt;&lt;img src=&#34;http://linux.mingguilu.com/images/170217_01_03_08.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
-&lt;h4 id=&#34;正式登录禅道管理系统之前-为了安全起见-必须删除install-php和upgrade-php&#34;&gt;正式登录禅道管理系统之前，为了安全起见，必须删除install.php和upgrade.php&lt;/h4&gt;
+&lt;h4 id=&#34;正式登录禅道管理系统之前-为了安全起见-必须删除install-php和upgrade-php:77831f7a9680d8377ea1d87039e03612&#34;&gt;正式登录禅道管理系统之前，为了安全起见，必须删除install.php和upgrade.php&lt;/h4&gt;
 
 &lt;p&gt;&lt;img src=&#34;http://linux.mingguilu.com/images/170217_01_03_09.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
@@ -118,19 +118,19 @@ $ sudo rm -rvf install.php upgrade.php
 已删除&#39;upgrade.php&#39;
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h4 id=&#34;登录禅道管理系统&#34;&gt;登录禅道管理系统&lt;/h4&gt;
+&lt;h4 id=&#34;登录禅道管理系统:77831f7a9680d8377ea1d87039e03612&#34;&gt;登录禅道管理系统&lt;/h4&gt;
 
 &lt;p&gt;&lt;img src=&#34;http://linux.mingguilu.com/images/170217_01_03_10.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
-&lt;h4 id=&#34;登录成功&#34;&gt;登录成功&lt;/h4&gt;
+&lt;h4 id=&#34;登录成功:77831f7a9680d8377ea1d87039e03612&#34;&gt;登录成功&lt;/h4&gt;
 
 &lt;p&gt;&lt;img src=&#34;http://linux.mingguilu.com/images/170217_01_03_11.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
-&lt;h3 id=&#34;常见问题fqa&#34;&gt;常见问题FQA&lt;/h3&gt;
+&lt;h3 id=&#34;常见问题fqa:77831f7a9680d8377ea1d87039e03612&#34;&gt;常见问题FQA&lt;/h3&gt;
 
-&lt;h4 id=&#34;１-在-生成配置文件-时-出现如下报错&#34;&gt;１.  在“生成配置文件”时，出现如下报错：&lt;/h4&gt;
+&lt;h4 id=&#34;１-在-生成配置文件-时-出现如下报错:77831f7a9680d8377ea1d87039e03612&#34;&gt;１.  在“生成配置文件”时，出现如下报错：&lt;/h4&gt;
 
 &lt;p&gt;&lt;img src=&#34;http://linux.mingguilu.com/images/170217_01_FQA_01.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
@@ -179,7 +179,7 @@ MariaDB [mysql]&amp;gt; select user,host from user;&lt;br /&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
-&lt;h4 id=&#34;2-保存配置文件-后-安装页面变成空白-无法设置帐号&#34;&gt;2.  “保存配置文件”后，安装页面变成空白，无法设置帐号&lt;/h4&gt;
+&lt;h4 id=&#34;2-保存配置文件-后-安装页面变成空白-无法设置帐号:77831f7a9680d8377ea1d87039e03612&#34;&gt;2.  “保存配置文件”后，安装页面变成空白，无法设置帐号&lt;/h4&gt;
 
 &lt;p&gt;解决方法：&lt;/p&gt;
 
@@ -205,50 +205,50 @@ MariaDB [mysql]&amp;gt; select user,host from user;&lt;br /&gt;
       <guid>http://linux.mingguilu.com/2017/02/16/ubuntu%E4%BD%BF%E7%94%A8apt%E6%90%AD%E5%BB%BAlamp</guid>
       <description>
 
-&lt;h3 id=&#34;１-web服务apache2&#34;&gt;１. Web服务Apache2&lt;/h3&gt;
+&lt;h3 id=&#34;１-web服务apache2:69138c1247bdb4999cb89f7ded85f8bd&#34;&gt;１. Web服务Apache2&lt;/h3&gt;
 
-&lt;h4 id=&#34;安装apache2&#34;&gt;安装Apache2&lt;/h4&gt;
+&lt;h4 id=&#34;安装apache2:69138c1247bdb4999cb89f7ded85f8bd&#34;&gt;安装Apache2&lt;/h4&gt;
 
 &lt;pre&gt;&lt;code&gt;$ sudo apt install -y apache2
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h4 id=&#34;查看apache2版本&#34;&gt;查看apache2版本&lt;/h4&gt;
+&lt;h4 id=&#34;查看apache2版本:69138c1247bdb4999cb89f7ded85f8bd&#34;&gt;查看apache2版本&lt;/h4&gt;
 
 &lt;pre&gt;&lt;code&gt;$ sudo apache2  -v
 Server version: Apache/2.4.18 (Ubuntu)
 Server built:   2016-07-14T12:32:26
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h4 id=&#34;启动apache2-service&#34;&gt;启动apache2.service&lt;/h4&gt;
+&lt;h4 id=&#34;启动apache2-service:69138c1247bdb4999cb89f7ded85f8bd&#34;&gt;启动apache2.service&lt;/h4&gt;
 
 &lt;pre&gt;&lt;code&gt;$ sudo systemctl start apache2.service
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h4 id=&#34;停止apache2-service&#34;&gt;停止apache2.service&lt;/h4&gt;
+&lt;h4 id=&#34;停止apache2-service:69138c1247bdb4999cb89f7ded85f8bd&#34;&gt;停止apache2.service&lt;/h4&gt;
 
 &lt;pre&gt;&lt;code&gt;$ sudo systemctl stop apache2.service
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h4 id=&#34;查看apache2-service状态&#34;&gt;查看apache2.service状态&lt;/h4&gt;
+&lt;h4 id=&#34;查看apache2-service状态:69138c1247bdb4999cb89f7ded85f8bd&#34;&gt;查看apache2.service状态&lt;/h4&gt;
 
 &lt;pre&gt;&lt;code&gt;$ sudo systemctl status apache2.service
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h4 id=&#34;在浏览器测试访问&#34;&gt;在浏览器测试访问&lt;/h4&gt;
+&lt;h4 id=&#34;在浏览器测试访问:69138c1247bdb4999cb89f7ded85f8bd&#34;&gt;在浏览器测试访问&lt;/h4&gt;
 
 &lt;pre&gt;&lt;code&gt;http://server-ip
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;&lt;img src=&#34;http://linux.mingguilu.com/images/170216_01_01_01.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
-&lt;h3 id=&#34;2-数据库服务mariadb&#34;&gt;2. 数据库服务MariaDB&lt;/h3&gt;
+&lt;h3 id=&#34;2-数据库服务mariadb:69138c1247bdb4999cb89f7ded85f8bd&#34;&gt;2. 数据库服务MariaDB&lt;/h3&gt;
 
-&lt;h4 id=&#34;安装mariadb&#34;&gt;安装MariaDB&lt;/h4&gt;
+&lt;h4 id=&#34;安装mariadb:69138c1247bdb4999cb89f7ded85f8bd&#34;&gt;安装MariaDB&lt;/h4&gt;
 
 &lt;pre&gt;&lt;code&gt;$ sudo apt install -y mariadb-server mariadb-client
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h4 id=&#34;设置mariadb-root用户密码&#34;&gt;设置MariaDB root用户密码&lt;/h4&gt;
+&lt;h4 id=&#34;设置mariadb-root用户密码:69138c1247bdb4999cb89f7ded85f8bd&#34;&gt;设置MariaDB root用户密码&lt;/h4&gt;
 
 &lt;pre&gt;&lt;code&gt;$ sudo mysql_secure_installation
 
@@ -275,7 +275,7 @@ installation should now be secure.
 Thanks for using MariaDB!
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h4 id=&#34;测试登录mariadb&#34;&gt;测试登录MariaDB&lt;/h4&gt;
+&lt;h4 id=&#34;测试登录mariadb:69138c1247bdb4999cb89f7ded85f8bd&#34;&gt;测试登录MariaDB&lt;/h4&gt;
 
 &lt;pre&gt;&lt;code&gt;$ sudo mysql -uroot -p  或  $ sudo mysql -u root -p
 
@@ -291,29 +291,29 @@ Type &#39;help;&#39; or &#39;\h&#39; for help. Type &#39;\c&#39; to clear the cu
 MariaDB [(none)]&amp;gt;
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h4 id=&#34;启动mariadb&#34;&gt;启动MariaDB&lt;/h4&gt;
+&lt;h4 id=&#34;启动mariadb:69138c1247bdb4999cb89f7ded85f8bd&#34;&gt;启动MariaDB&lt;/h4&gt;
 
 &lt;pre&gt;&lt;code&gt;$ sudo systemctl start mysql-service
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h4 id=&#34;停止mariadb&#34;&gt;停止MariaDB&lt;/h4&gt;
+&lt;h4 id=&#34;停止mariadb:69138c1247bdb4999cb89f7ded85f8bd&#34;&gt;停止MariaDB&lt;/h4&gt;
 
 &lt;pre&gt;&lt;code&gt;$ sudo systemctl stop mysql-service
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h4 id=&#34;查看mariadb&#34;&gt;查看MariaDB&lt;/h4&gt;
+&lt;h4 id=&#34;查看mariadb:69138c1247bdb4999cb89f7ded85f8bd&#34;&gt;查看MariaDB&lt;/h4&gt;
 
 &lt;pre&gt;&lt;code&gt;$ sudo systemctl status mysql.service
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h3 id=&#34;3-脚本语言php&#34;&gt;3. 脚本语言PHP&lt;/h3&gt;
+&lt;h3 id=&#34;3-脚本语言php:69138c1247bdb4999cb89f7ded85f8bd&#34;&gt;3. 脚本语言PHP&lt;/h3&gt;
 
-&lt;h4 id=&#34;安装php7&#34;&gt;安装PHP7&lt;/h4&gt;
+&lt;h4 id=&#34;安装php7:69138c1247bdb4999cb89f7ded85f8bd&#34;&gt;安装PHP7&lt;/h4&gt;
 
 &lt;pre&gt;&lt;code&gt;$ sudo apt install -y php7.0 php7.0-mysql php7.0-curl php7.0-json php7.0-cgi libapache2-mod-php7.0
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h4 id=&#34;查看php版本&#34;&gt;查看php版本&lt;/h4&gt;
+&lt;h4 id=&#34;查看php版本:69138c1247bdb4999cb89f7ded85f8bd&#34;&gt;查看php版本&lt;/h4&gt;
 
 &lt;pre&gt;&lt;code&gt;$ sudo php -v
 
@@ -323,7 +323,7 @@ Zend Engine v3.0.0, Copyright (c) 1998-2016 Zend Technologies
     with Zend OPcache v7.0.13-0ubuntu0.16.04.1, Copyright (c) 1999-2016, by Zend Technologies
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h4 id=&#34;创建php探针&#34;&gt;创建php探针&lt;/h4&gt;
+&lt;h4 id=&#34;创建php探针:69138c1247bdb4999cb89f7ded85f8bd&#34;&gt;创建php探针&lt;/h4&gt;
 
 &lt;pre&gt;&lt;code&gt;$ sudo vim /var/www/html/test.php
 
@@ -333,16 +333,16 @@ $ sudo cat /var/www/html/test.php
 ?&amp;gt;
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h4 id=&#34;在浏览器测试php探针文件&#34;&gt;在浏览器测试php探针文件&lt;/h4&gt;
+&lt;h4 id=&#34;在浏览器测试php探针文件:69138c1247bdb4999cb89f7ded85f8bd&#34;&gt;在浏览器测试php探针文件&lt;/h4&gt;
 
 &lt;pre&gt;&lt;code&gt;http://server-ip/test.php
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;&lt;img src=&#34;http://linux.mingguilu.com/images/170216_01_03_01.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
-&lt;h3 id=&#34;4-phpmyadmin&#34;&gt;4. phpMyAdmin&lt;/h3&gt;
+&lt;h3 id=&#34;4-phpmyadmin:69138c1247bdb4999cb89f7ded85f8bd&#34;&gt;4. phpMyAdmin&lt;/h3&gt;
 
-&lt;h4 id=&#34;安装phpmyadmin&#34;&gt;安装phpMyAdmin&lt;/h4&gt;
+&lt;h4 id=&#34;安装phpmyadmin:69138c1247bdb4999cb89f7ded85f8bd&#34;&gt;安装phpMyAdmin&lt;/h4&gt;
 
 &lt;pre&gt;&lt;code&gt;$ sudo apt install -y phpmyadmin
 &lt;/code&gt;&lt;/pre&gt;
@@ -359,14 +359,14 @@ $ sudo cat /var/www/html/test.php
 
 &lt;p&gt;&lt;img src=&#34;http://linux.mingguilu.com/images/170216_01_04_03.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
-&lt;h4 id=&#34;在浏览器测试访问phpmyadmin&#34;&gt;在浏览器测试访问phpMyAdmin&lt;/h4&gt;
+&lt;h4 id=&#34;在浏览器测试访问phpmyadmin:69138c1247bdb4999cb89f7ded85f8bd&#34;&gt;在浏览器测试访问phpMyAdmin&lt;/h4&gt;
 
 &lt;pre&gt;&lt;code&gt;http://server-ip/phpmyadmin
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;&lt;img src=&#34;http://linux.mingguilu.com/images/170216_01_04_04.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
-&lt;h4 id=&#34;登录phpmyadmin&#34;&gt;登录phpMyAdmin&lt;/h4&gt;
+&lt;h4 id=&#34;登录phpmyadmin:69138c1247bdb4999cb89f7ded85f8bd&#34;&gt;登录phpMyAdmin&lt;/h4&gt;
 
 &lt;p&gt;用户名：phpmyadmin&lt;/p&gt;
 
@@ -380,7 +380,7 @@ $ sudo cat /var/www/html/test.php
 
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
-&lt;h4 id=&#34;注意-如果使用root用户和密码登录phpmyadmin-则会报错&#34;&gt;注意：如果使用root用户和密码登录phpMyAdmin,则会报错：&lt;/h4&gt;
+&lt;h4 id=&#34;注意-如果使用root用户和密码登录phpmyadmin-则会报错:69138c1247bdb4999cb89f7ded85f8bd&#34;&gt;注意：如果使用root用户和密码登录phpMyAdmin,则会报错：&lt;/h4&gt;
 
 &lt;p&gt;&lt;strong&gt;待解决&lt;/strong&gt;：为什么root无法登录？因为禁止了root用户远程登录数据库？该怎么处理？&lt;/p&gt;
 

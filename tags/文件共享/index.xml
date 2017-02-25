@@ -2,11 +2,11 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>文件共享 on Linux</title>
-    <link>http://linux.mingguilu.com/tags/%E6%96%87%E4%BB%B6%E5%85%B1%E4%BA%AB/index.xml</link>
+    <link>http://linux.mingguilu.com/tags/%E6%96%87%E4%BB%B6%E5%85%B1%E4%BA%AB/</link>
     <description>Recent content in 文件共享 on Linux</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <copyright>Powered by [Hugo](//gohugo.io). Theme by [hugo-theme-arch](https://github.com/syui/hugo-theme-arch). Hosted by [Github](https://github.com).</copyright>
+    <lastBuildDate>Thu, 23 Feb 2017 21:14:26 +0800</lastBuildDate>
     <atom:link href="http://linux.mingguilu.com/tags/%E6%96%87%E4%BB%B6%E5%85%B1%E4%BA%AB/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
@@ -17,7 +17,7 @@
       <guid>http://linux.mingguilu.com/2017/02/23/centos7%E4%BD%BF%E7%94%A8yum%E6%90%AD%E5%BB%BAsamba%E6%96%87%E4%BB%B6%E5%85%B1%E4%BA%AB</guid>
       <description>
 
-&lt;h3 id=&#34;1-关于samba&#34;&gt;1. 关于Samba&lt;/h3&gt;
+&lt;h3 id=&#34;1-关于samba:7f3b8ed4e97f874da5c624bfbeb106fd&#34;&gt;1. 关于Samba&lt;/h3&gt;
 
 &lt;p&gt;Samba用于在Linux、UNIX和Windows之间提供安全、稳定、快速的文件和打印服务。&lt;/p&gt;
 
@@ -37,7 +37,7 @@
 &lt;li&gt;&lt;p&gt;nmbd服务进程  提供NetBIOS名称服务，以满足基于Common Internet File System (CIFS)协议的共享访问，默认使用UDP协议的137端口&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h3 id=&#34;2-关闭防火墙和selinux&#34;&gt;2. 关闭防火墙和SELinux&lt;/h3&gt;
+&lt;h3 id=&#34;2-关闭防火墙和selinux:7f3b8ed4e97f874da5c624bfbeb106fd&#34;&gt;2. 关闭防火墙和SELinux&lt;/h3&gt;
 
 &lt;p&gt;CentOS7防火墙与SELinux默认是开启状态，并拒绝远程用户对Samba的访问，需要暂时关闭。&lt;/p&gt;
 
@@ -82,7 +82,7 @@ Removed symlink /etc/systemd/system/dbus-org.fedoraproject.FirewallD1.service.
 Removed symlink /etc/systemd/system/basic.target.wants/firewalld.service.
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h3 id=&#34;3-配置samba服务器&#34;&gt;3. 配置Samba服务器&lt;/h3&gt;
+&lt;h3 id=&#34;3-配置samba服务器:7f3b8ed4e97f874da5c624bfbeb106fd&#34;&gt;3. 配置Samba服务器&lt;/h3&gt;
 
 &lt;p&gt;安装Samba软件&lt;/p&gt;
 
@@ -127,7 +127,7 @@ samba-libs-4.4.4-12.el7_3.x86_64
 # systemctl enable nmb.service
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h3 id=&#34;4-创建共享目录&#34;&gt;4. 创建共享目录&lt;/h3&gt;
+&lt;h3 id=&#34;4-创建共享目录:7f3b8ed4e97f874da5c624bfbeb106fd&#34;&gt;4. 创建共享目录&lt;/h3&gt;
 
 &lt;p&gt;假设目前有设计、开发、运维三个部门，各自创建一个部门共享目录供部门内部共享文件，和一个公共共享目录供部门间互相共享文件：&lt;/p&gt;
 
@@ -145,7 +145,7 @@ samba-libs-4.4.4-12.el7_3.x86_64
 7 directories, 0 files
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h3 id=&#34;5-创建samba账户&#34;&gt;5. 创建Samba账户&lt;/h3&gt;
+&lt;h3 id=&#34;5-创建samba账户:7f3b8ed4e97f874da5c624bfbeb106fd&#34;&gt;5. 创建Samba账户&lt;/h3&gt;
 
 &lt;p&gt;在使用useradd创建系统账户时使用参数 -s /sbin/nologin 指定账户无法登陆系统，提高账户安全性&lt;/p&gt;
 
@@ -174,7 +174,7 @@ samba-libs-4.4.4-12.el7_3.x86_64
 # smbpasswd -a ops2
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h3 id=&#34;6-修改配置文件&#34;&gt;6. 修改配置文件&lt;/h3&gt;
+&lt;h3 id=&#34;6-修改配置文件:7f3b8ed4e97f874da5c624bfbeb106fd&#34;&gt;6. 修改配置文件&lt;/h3&gt;
 
 &lt;p&gt;Samba默认配置文件：/etc/samba/smb.conf&lt;/p&gt;
 
@@ -284,7 +284,7 @@ samba-libs-4.4.4-12.el7_3.x86_64
     directory mask = 0775      # 创建目录的用户和所属组拥有可读写执行权限，其它用户可读可执行
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h3 id=&#34;7-修改共享目录权限&#34;&gt;7. 修改共享目录权限&lt;/h3&gt;
+&lt;h3 id=&#34;7-修改共享目录权限:7f3b8ed4e97f874da5c624bfbeb106fd&#34;&gt;7. 修改共享目录权限&lt;/h3&gt;
 
 &lt;p&gt;除了要在Samba主配置文件中定义权限外，还需要为系统目录设置正确的权限&lt;/p&gt;
 
@@ -295,12 +295,12 @@ samba-libs-4.4.4-12.el7_3.x86_64
 # chown :ops /filesrv/ops
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h3 id=&#34;8-重启samba服务&#34;&gt;8. 重启Samba服务&lt;/h3&gt;
+&lt;h3 id=&#34;8-重启samba服务:7f3b8ed4e97f874da5c624bfbeb106fd&#34;&gt;8. 重启Samba服务&lt;/h3&gt;
 
 &lt;pre&gt;&lt;code&gt;# systemctl restart smb.service
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h3 id=&#34;9-访问samba共享&#34;&gt;9. 访问Samba共享&lt;/h3&gt;
+&lt;h3 id=&#34;9-访问samba共享:7f3b8ed4e97f874da5c624bfbeb106fd&#34;&gt;9. 访问Samba共享&lt;/h3&gt;
 
 &lt;ul&gt;
 &lt;li&gt;Windows客户端访问:&lt;code&gt;\\Samba-server-ip&lt;/code&gt;&lt;/li&gt;
@@ -367,9 +367,9 @@ smb: \&amp;gt; ls
 
 &lt;hr /&gt;
 
-&lt;h3 id=&#34;常见问题fqa&#34;&gt;常见问题FQA&lt;/h3&gt;
+&lt;h3 id=&#34;常见问题fqa:7f3b8ed4e97f874da5c624bfbeb106fd&#34;&gt;常见问题FQA&lt;/h3&gt;
 
-&lt;h4 id=&#34;1-安装了samba-client-但使用-smbclient-命令时如下报错&#34;&gt;1. 安装了samba-client，但使用&lt;code&gt;smbclient&lt;/code&gt;命令时如下报错：&lt;/h4&gt;
+&lt;h4 id=&#34;1-安装了samba-client-但使用-smbclient-命令时如下报错:7f3b8ed4e97f874da5c624bfbeb106fd&#34;&gt;1. 安装了samba-client，但使用&lt;code&gt;smbclient&lt;/code&gt;命令时如下报错：&lt;/h4&gt;
 
 &lt;pre&gt;&lt;code&gt;# smbclient -L \\192.168.80.102
 smbclient: relocation error: /lib64/libsamba-credentials.so.0: symbol GSS_KRB5_CRED_NO_CI_FLAGS_X, version gssapi_krb5_2_MIT not defined in file libgssapi_krb5.so.2 with link time reference       # 缺失samba软件
@@ -380,7 +380,7 @@ smbclient: relocation error: /lib64/libsamba-credentials.so.0: symbol GSS_KRB5_C
 &lt;pre&gt;&lt;code&gt;# yum install -y samba
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h4 id=&#34;2-查看samba主机共享信息时-有报错&#34;&gt;2. 查看Samba主机共享信息时，有报错：&lt;/h4&gt;
+&lt;h4 id=&#34;2-查看samba主机共享信息时-有报错:7f3b8ed4e97f874da5c624bfbeb106fd&#34;&gt;2. 查看Samba主机共享信息时，有报错：&lt;/h4&gt;
 
 &lt;pre&gt;&lt;code&gt;# smbclient -L \\192.168.80.102
 Enter root&#39;s password:
@@ -389,7 +389,7 @@ session setup failed: NT_STATUS_LOGON_FAILURE     # 登陆失败，一般为账�
 
 &lt;p&gt;解决方法：仅查看共享信息不需要密码，此处直接回车，以匿名用户查看&lt;/p&gt;
 
-&lt;h4 id=&#34;3-访问samba共享目录时-有报错&#34;&gt;3. 访问Samba共享目录时，有报错&lt;/h4&gt;
+&lt;h4 id=&#34;3-访问samba共享目录时-有报错:7f3b8ed4e97f874da5c624bfbeb106fd&#34;&gt;3. 访问Samba共享目录时，有报错&lt;/h4&gt;
 
 &lt;pre&gt;&lt;code&gt;# smbclient -U develop2 //192.168.80.102
 \\192.168.80.102: Not enough &#39;\&#39; characters in service    # 共享路径输入有误，一般使用//ip格式访问时会报错
@@ -397,7 +397,7 @@ session setup failed: NT_STATUS_LOGON_FAILURE     # 登陆失败，一般为账�
 
 &lt;p&gt;解决：按照正确的格式输入共享路径 &lt;code&gt;//Samba-server-ip/share-name&lt;/code&gt;&lt;/p&gt;
 
-&lt;h4 id=&#34;4-访问samba共享目录时-有报错&#34;&gt;4. 访问Samba共享目录时，有报错：&lt;/h4&gt;
+&lt;h4 id=&#34;4-访问samba共享目录时-有报错:7f3b8ed4e97f874da5c624bfbeb106fd&#34;&gt;4. 访问Samba共享目录时，有报错：&lt;/h4&gt;
 
 &lt;pre&gt;&lt;code&gt;# smbclient -U develop2 //192.168.80.102/filesrv
 Enter develop2&#39;s password:
@@ -410,7 +410,7 @@ tree connect failed: NT_STATUS_BAD_NETWORK_NAME    # 输入性错误，一般为
 &lt;pre&gt;&lt;code&gt;# smbclient -U develop2 //192.168.80.102/develop
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h4 id=&#34;5-访问共享目录时-有报错&#34;&gt;5. 访问共享目录时，有报错：&lt;/h4&gt;
+&lt;h4 id=&#34;5-访问共享目录时-有报错:7f3b8ed4e97f874da5c624bfbeb106fd&#34;&gt;5. 访问共享目录时，有报错：&lt;/h4&gt;
 
 &lt;pre&gt;&lt;code&gt;# smbclient -U develop2 //192.168.80.102/develop
 Enter develop2&#39;s password:
@@ -419,7 +419,7 @@ Connection to 192.168.80.102 failed (Error NT_STATUS_HOST_UNREACHABLE)      # �
 
 &lt;p&gt;解决方法：排除网络连接问题，调整防火墙策略，或关闭防火墙&lt;/p&gt;
 
-&lt;h4 id=&#34;6-访问共享目录是-有报错&#34;&gt;6. 访问共享目录是，有报错：&lt;/h4&gt;
+&lt;h4 id=&#34;6-访问共享目录是-有报错:7f3b8ed4e97f874da5c624bfbeb106fd&#34;&gt;6. 访问共享目录是，有报错：&lt;/h4&gt;
 
 &lt;pre&gt;&lt;code&gt;# smbclient -U develop2 //192.168.80.102/ops
 Enter develop2&#39;s password:

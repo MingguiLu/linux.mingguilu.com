@@ -2,6 +2,12 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://linux.mingguilu.com/</loc>
+    <lastmod>2017-02-23T21:14:26+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>http://linux.mingguilu.com/2017/02/23/centos7%E4%BD%BF%E7%94%A8yum%E6%90%AD%E5%BB%BAsamba%E6%96%87%E4%BB%B6%E5%85%B1%E4%BA%AB</loc>
     <lastmod>2017-02-23T21:14:26+08:00</lastmod>
   </url>
@@ -24,112 +30,6 @@
   <url>
     <loc>http://linux.mingguilu.com/about/</loc>
     <lastmod>2017-02-15T16:21:10+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://linux.mingguilu.com/tags/apache/</loc>
-    <lastmod>2017-02-16T09:52:59+08:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://linux.mingguilu.com/categories/</loc>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://linux.mingguilu.com/categories/centos/</loc>
-    <lastmod>2017-02-23T21:14:26+08:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://linux.mingguilu.com/tags/centos7/</loc>
-    <lastmod>2017-02-23T21:14:26+08:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://linux.mingguilu.com/tags/lamp/</loc>
-    <lastmod>2017-02-16T09:52:59+08:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://linux.mingguilu.com/</loc>
-    <lastmod>2017-02-23T21:14:26+08:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://linux.mingguilu.com/tags/mariadb/</loc>
-    <lastmod>2017-02-16T09:52:59+08:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://linux.mingguilu.com/tags/php/</loc>
-    <lastmod>2017-02-16T09:52:59+08:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://linux.mingguilu.com/tags/phpmyadmin/</loc>
-    <lastmod>2017-02-16T09:52:59+08:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://linux.mingguilu.com/post/</loc>
-    <lastmod>2017-02-23T21:14:26+08:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://linux.mingguilu.com/tags/samba/</loc>
-    <lastmod>2017-02-23T21:14:26+08:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://linux.mingguilu.com/tags/</loc>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://linux.mingguilu.com/categories/ubuntu/</loc>
-    <lastmod>2017-02-18T14:17:37+08:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://linux.mingguilu.com/tags/ubuntu16/index.04/</loc>
-    <lastmod>2017-02-17T22:48:12+08:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://linux.mingguilu.com/tags/zbox/</loc>
-    <lastmod>2017-02-18T14:17:37+08:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://linux.mingguilu.com/tags/zentao/</loc>
-    <lastmod>2017-02-18T14:17:37+08:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://linux.mingguilu.com/tags/%E6%96%87%E4%BB%B6%E5%85%B1%E4%BA%AB/</loc>
-    <lastmod>2017-02-23T21:14:26+08:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://linux.mingguilu.com/tags/%E7%A6%85%E9%81%93/</loc>
-    <lastmod>2017-02-18T14:17:37+08:00</lastmod>
-    <priority>0</priority>
   </url>
   
 </urlset>

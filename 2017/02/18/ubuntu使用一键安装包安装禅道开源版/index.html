@@ -3,7 +3,7 @@
 <head>
     
     <title>Ubuntu使用一键安装包安装禅道开源版</title>
-    <meta name="generator" content="Hugo 0.18.1" />
+    <meta name="generator" content="Hugo 0.16-DEV" />
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     
@@ -20,13 +20,7 @@
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400italic,400,600' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Source+Code+Pro' rel='stylesheet' type='text/css'>
     <meta property="og:title" content="Ubuntu使用一键安装包安装禅道开源版" />
-<meta property="og:description" content="相比搭建LAMP环境使用源码包安装禅道，使用Linux一键安装包则简单很多
- 1. 下载并安装Linux 64位一键安装包 下载禅道9.0.1版本Linux 64位一键安装包
-$ wget http://dl.cnezsoft.com/zentao/9.0.1/ZenTaoPMS.9.0.1.zbox_64.tar.gz  直接将安装包解压缩到/opt目录下，即安装完成
-$ sudo tar -zxvf ZenTaoPMS.9.0.1.zbox_64.tar.gz -C /opt/  2. 使用zbox命令管理Apache和Ｍysql服务 获取zbox命令的帮助
-$ sudo /opt/zbox/zbox -h Usage: zbox.php {start|stop|restart|status} Options: -h --help Show help. -ap --aport Apache port, default 80　# 修改Apache服务端口号 -mp --mport Mysql port, default 3306　# 修改Mysql服务端口号  开启Apache和Ｍysql服务
-$ sudo /opt/zbox/zbox start Start Apache success Start Mysql success  重启Apache和Ｍysql服务
-$ sudo /opt/zbox/zbox restart Retart Apache success Retart Mysql success  停止Apache和Ｍysql服务" />
+<meta property="og:description" content="相比搭建LAMP环境使用源码包安装禅道，使用Linux一键安装包则简单很多 1. 下载并安装Linux 64位一键安装包 下载禅道9.0.1版本Linux 64位一键安装包 $ wget http://dl.cnezsoft.com/zentao/9.0.1/ZenTaoPMS.9.0.1.zbox_64.tar.gz 直接将安装包解压缩到/opt目录下，即安装完成 $ sudo tar -zxvf ZenTaoPMS.9.0.1.zbox_64.tar.gz -C /opt/ 2. 使用zbox命令管理Apache和Ｍysql服务 获取zbox命令的帮助 $ sudo /opt/zbox/zbox -h Usage: zbox.php {start|stop|restart|status} Options: -h --help Show help. -ap --aport Apache port, default 80 # 修改Apache服务端口号 -mp --mport Mysql port, default 3306 # 修改Mysql服务端口号 开启Apache和Ｍysql服务 $ sudo /opt/zbox/zbox start Start Apache success Start Mysql success 重启Apache和Ｍysql服务 $ sudo /opt/zbox/zbox restart Retart Apache success Retart Mysql success 停止Apache和Ｍysql服务 $ sudo /opt/zbox/zbox stop Stop Apache success Stop Mysql success 查看Apache和Ｍysql服务状态 $ sudo /opt/zbox/zbox status Apache is not running Mysql is not running 开启Apache和Ｍysql服务后，在浏览器访问禅道管理系统 http://server-ip 进入“开源版”登录界面，默认帐号：admin，密码：123456 登录成功 3." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="http://linux.mingguilu.com/2017/02/18/ubuntu%E4%BD%BF%E7%94%A8%E4%B8%80%E9%94%AE%E5%AE%89%E8%A3%85%E5%8C%85%E5%AE%89%E8%A3%85%E7%A6%85%E9%81%93%E5%BC%80%E6%BA%90%E7%89%88" />
 
@@ -45,13 +39,7 @@ $ sudo /opt/zbox/zbox restart Retart Apache success Retart Mysql success  停止
     
     
 <meta itemprop="name" content="Ubuntu使用一键安装包安装禅道开源版">
-<meta itemprop="description" content="相比搭建LAMP环境使用源码包安装禅道，使用Linux一键安装包则简单很多
- 1. 下载并安装Linux 64位一键安装包 下载禅道9.0.1版本Linux 64位一键安装包
-$ wget http://dl.cnezsoft.com/zentao/9.0.1/ZenTaoPMS.9.0.1.zbox_64.tar.gz  直接将安装包解压缩到/opt目录下，即安装完成
-$ sudo tar -zxvf ZenTaoPMS.9.0.1.zbox_64.tar.gz -C /opt/  2. 使用zbox命令管理Apache和Ｍysql服务 获取zbox命令的帮助
-$ sudo /opt/zbox/zbox -h Usage: zbox.php {start|stop|restart|status} Options: -h --help Show help. -ap --aport Apache port, default 80　# 修改Apache服务端口号 -mp --mport Mysql port, default 3306　# 修改Mysql服务端口号  开启Apache和Ｍysql服务
-$ sudo /opt/zbox/zbox start Start Apache success Start Mysql success  重启Apache和Ｍysql服务
-$ sudo /opt/zbox/zbox restart Retart Apache success Retart Mysql success  停止Apache和Ｍysql服务">
+<meta itemprop="description" content="相比搭建LAMP环境使用源码包安装禅道，使用Linux一键安装包则简单很多 1. 下载并安装Linux 64位一键安装包 下载禅道9.0.1版本Linux 64位一键安装包 $ wget http://dl.cnezsoft.com/zentao/9.0.1/ZenTaoPMS.9.0.1.zbox_64.tar.gz 直接将安装包解压缩到/opt目录下，即安装完成 $ sudo tar -zxvf ZenTaoPMS.9.0.1.zbox_64.tar.gz -C /opt/ 2. 使用zbox命令管理Apache和Ｍysql服务 获取zbox命令的帮助 $ sudo /opt/zbox/zbox -h Usage: zbox.php {start|stop|restart|status} Options: -h --help Show help. -ap --aport Apache port, default 80 # 修改Apache服务端口号 -mp --mport Mysql port, default 3306 # 修改Mysql服务端口号 开启Apache和Ｍysql服务 $ sudo /opt/zbox/zbox start Start Apache success Start Mysql success 重启Apache和Ｍysql服务 $ sudo /opt/zbox/zbox restart Retart Apache success Retart Mysql success 停止Apache和Ｍysql服务 $ sudo /opt/zbox/zbox stop Stop Apache success Stop Mysql success 查看Apache和Ｍysql服务状态 $ sudo /opt/zbox/zbox status Apache is not running Mysql is not running 开启Apache和Ｍysql服务后，在浏览器访问禅道管理系统 http://server-ip 进入“开源版”登录界面，默认帐号：admin，密码：123456 登录成功 3.">
 
 
 <meta itemprop="dateModified" content="2017-02-18T14:17:37&#43;08:00" />
@@ -68,13 +56,7 @@ $ sudo /opt/zbox/zbox restart Retart Apache success Retart Mysql success  停止
 
 
 <meta name="twitter:title" content="Ubuntu使用一键安装包安装禅道开源版"/>
-<meta name="twitter:description" content="相比搭建LAMP环境使用源码包安装禅道，使用Linux一键安装包则简单很多
- 1. 下载并安装Linux 64位一键安装包 下载禅道9.0.1版本Linux 64位一键安装包
-$ wget http://dl.cnezsoft.com/zentao/9.0.1/ZenTaoPMS.9.0.1.zbox_64.tar.gz  直接将安装包解压缩到/opt目录下，即安装完成
-$ sudo tar -zxvf ZenTaoPMS.9.0.1.zbox_64.tar.gz -C /opt/  2. 使用zbox命令管理Apache和Ｍysql服务 获取zbox命令的帮助
-$ sudo /opt/zbox/zbox -h Usage: zbox.php {start|stop|restart|status} Options: -h --help Show help. -ap --aport Apache port, default 80　# 修改Apache服务端口号 -mp --mport Mysql port, default 3306　# 修改Mysql服务端口号  开启Apache和Ｍysql服务
-$ sudo /opt/zbox/zbox start Start Apache success Start Mysql success  重启Apache和Ｍysql服务
-$ sudo /opt/zbox/zbox restart Retart Apache success Retart Mysql success  停止Apache和Ｍysql服务"/>
+<meta name="twitter:description" content="相比搭建LAMP环境使用源码包安装禅道，使用Linux一键安装包则简单很多 1. 下载并安装Linux 64位一键安装包 下载禅道9.0.1版本Linux 64位一键安装包 $ wget http://dl.cnezsoft.com/zentao/9.0.1/ZenTaoPMS.9.0.1.zbox_64.tar.gz 直接将安装包解压缩到/opt目录下，即安装完成 $ sudo tar -zxvf ZenTaoPMS.9.0.1.zbox_64.tar.gz -C /opt/ 2. 使用zbox命令管理Apache和Ｍysql服务 获取zbox命令的帮助 $ sudo /opt/zbox/zbox -h Usage: zbox.php {start|stop|restart|status} Options: -h --help Show help. -ap --aport Apache port, default 80 # 修改Apache服务端口号 -mp --mport Mysql port, default 3306 # 修改Mysql服务端口号 开启Apache和Ｍysql服务 $ sudo /opt/zbox/zbox start Start Apache success Start Mysql success 重启Apache和Ｍysql服务 $ sudo /opt/zbox/zbox restart Retart Apache success Retart Mysql success 停止Apache和Ｍysql服务 $ sudo /opt/zbox/zbox stop Stop Apache success Stop Mysql success 查看Apache和Ｍysql服务状态 $ sudo /opt/zbox/zbox status Apache is not running Mysql is not running 开启Apache和Ｍysql服务后，在浏览器访问禅道管理系统 http://server-ip 进入“开源版”登录界面，默认帐号：admin，密码：123456 登录成功 3."/>
 
 
 
@@ -234,7 +216,7 @@ $ sudo /opt/zbox/zbox restart Retart Apache success Retart Mysql success  停止
 <p>相比<a href="http://linux.mingguilu.com/2017/02/16/ubuntu%E4%BD%BF%E7%94%A8apt%E6%90%AD%E5%BB%BAlamp/">搭建LAMP环境</a><a href="http://linux.mingguilu.com/2017/02/17/ubuntu%E4%BD%BF%E7%94%A8%E6%BA%90%E7%A0%81%E5%8C%85%E5%AE%89%E8%A3%85%E7%A6%85%E9%81%93%E5%BC%80%E6%BA%90%E7%89%88/">使用源码包安装禅道</a>，使用Linux一键安装包则简单很多</p>
 </blockquote>
 
-<h3 id="1-下载并安装-linux-64位一键安装包-http-www-zentao-net-download-80025-html">1. 下载并安装<a href="http://www.zentao.net/download/80025.html">Linux 64位一键安装包</a></h3>
+<h3 id="1-下载并安装-linux-64位一键安装包-http-www-zentao-net-download-80025-html:bc60e6351e871c8f3736c4ed6613e491">1. 下载并安装<a href="http://www.zentao.net/download/80025.html">Linux 64位一键安装包</a></h3>
 
 <p>下载<a href="http://dl.cnezsoft.com/zentao/9.0.1/ZenTaoPMS.9.0.1.zbox_64.tar.gz">禅道9.0.1版本Linux 64位一键安装包</a></p>
 
@@ -246,7 +228,7 @@ $ sudo /opt/zbox/zbox restart Retart Apache success Retart Mysql success  停止
 <pre><code>$ sudo tar -zxvf ZenTaoPMS.9.0.1.zbox_64.tar.gz -C /opt/
 </code></pre>
 
-<h3 id="2-使用zbox命令管理apache和ｍysql服务">2. 使用zbox命令管理Apache和Ｍysql服务</h3>
+<h3 id="2-使用zbox命令管理apache和ｍysql服务:bc60e6351e871c8f3736c4ed6613e491">2. 使用zbox命令管理Apache和Ｍysql服务</h3>
 
 <p>获取zbox命令的帮助</p>
 
@@ -302,9 +284,9 @@ Mysql is not running
 
 <p><img src="/images/170218_01_02_03.png" alt="" /></p>
 
-<h3 id="3-访问数据库">3. 访问数据库</h3>
+<h3 id="3-访问数据库:bc60e6351e871c8f3736c4ed6613e491">3. 访问数据库</h3>
 
-<h4 id="网页登录数据库">网页登录数据库</h4>
+<h4 id="网页登录数据库:bc60e6351e871c8f3736c4ed6613e491">网页登录数据库</h4>
 
 <p>数据库管理用的是adminer，为了安全，访问adminer的时候需要身份验证，需要运行/opt/zbox/auth/adduser.sh来添加用户</p>
 
@@ -339,7 +321,7 @@ Adding password for user adminer2</p></li>
 
 <p><img src="/images/170218_01_03_03.png" alt="" /></p>
 
-<h4 id="命令行连接数据库">命令行连接数据库</h4>
+<h4 id="命令行连接数据库:bc60e6351e871c8f3736c4ed6613e491">命令行连接数据库</h4>
 
 <p>登录数据库，默认帐号:root，密码为空</p>
 
@@ -366,9 +348,9 @@ mysql&gt;
 
 <hr />
 
-<h3 id="常见问题fqa">常见问题FQA</h3>
+<h3 id="常见问题fqa:bc60e6351e871c8f3736c4ed6613e491">常见问题FQA</h3>
 
-<h4 id="1-如果服务器上已经搭建了lamp环境-80端口和3306端口被占用了-无法启动">1.  如果服务器上已经搭建了LAMP环境，80端口和3306端口被占用了，无法启动</h4>
+<h4 id="1-如果服务器上已经搭建了lamp环境-80端口和3306端口被占用了-无法启动:bc60e6351e871c8f3736c4ed6613e491">1.  如果服务器上已经搭建了LAMP环境，80端口和3306端口被占用了，无法启动</h4>
 
 <pre><code>$ sudo /opt/zbox/zbox start
 (98)Address already in use: AH00073: make_sock: unable to listen for connections on address 0.0.0.0:80
@@ -402,13 +384,7 @@ Start Mysql fail. You can see the log /opt/zbox/logs/mysql_error.log
 <p><em>参考文档</em></p>
 
 <ul>
-<li><a href="http://www.zentao.net/book/zentaopmshelp/90.html">linux用一键安装包</a>
-
-
-
-
-
-<br /></li>
+<li><a href="http://www.zentao.net/book/zentaopmshelp/90.html">linux用一键安装包</a></li>
 </ul>
 
             </div>

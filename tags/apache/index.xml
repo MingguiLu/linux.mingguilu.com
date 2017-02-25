@@ -2,11 +2,11 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Apache on Linux</title>
-    <link>http://linux.mingguilu.com/tags/apache/index.xml</link>
+    <link>http://linux.mingguilu.com/tags/apache/</link>
     <description>Recent content in Apache on Linux</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <copyright>Powered by [Hugo](//gohugo.io). Theme by [hugo-theme-arch](https://github.com/syui/hugo-theme-arch). Hosted by [Github](https://github.com).</copyright>
+    <lastBuildDate>Thu, 16 Feb 2017 09:52:59 +0800</lastBuildDate>
     <atom:link href="http://linux.mingguilu.com/tags/apache/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
@@ -17,50 +17,50 @@
       <guid>http://linux.mingguilu.com/2017/02/16/ubuntu%E4%BD%BF%E7%94%A8apt%E6%90%AD%E5%BB%BAlamp</guid>
       <description>
 
-&lt;h3 id=&#34;１-web服务apache2&#34;&gt;１. Web服务Apache2&lt;/h3&gt;
+&lt;h3 id=&#34;１-web服务apache2:69138c1247bdb4999cb89f7ded85f8bd&#34;&gt;１. Web服务Apache2&lt;/h3&gt;
 
-&lt;h4 id=&#34;安装apache2&#34;&gt;安装Apache2&lt;/h4&gt;
+&lt;h4 id=&#34;安装apache2:69138c1247bdb4999cb89f7ded85f8bd&#34;&gt;安装Apache2&lt;/h4&gt;
 
 &lt;pre&gt;&lt;code&gt;$ sudo apt install -y apache2
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h4 id=&#34;查看apache2版本&#34;&gt;查看apache2版本&lt;/h4&gt;
+&lt;h4 id=&#34;查看apache2版本:69138c1247bdb4999cb89f7ded85f8bd&#34;&gt;查看apache2版本&lt;/h4&gt;
 
 &lt;pre&gt;&lt;code&gt;$ sudo apache2  -v
 Server version: Apache/2.4.18 (Ubuntu)
 Server built:   2016-07-14T12:32:26
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h4 id=&#34;启动apache2-service&#34;&gt;启动apache2.service&lt;/h4&gt;
+&lt;h4 id=&#34;启动apache2-service:69138c1247bdb4999cb89f7ded85f8bd&#34;&gt;启动apache2.service&lt;/h4&gt;
 
 &lt;pre&gt;&lt;code&gt;$ sudo systemctl start apache2.service
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h4 id=&#34;停止apache2-service&#34;&gt;停止apache2.service&lt;/h4&gt;
+&lt;h4 id=&#34;停止apache2-service:69138c1247bdb4999cb89f7ded85f8bd&#34;&gt;停止apache2.service&lt;/h4&gt;
 
 &lt;pre&gt;&lt;code&gt;$ sudo systemctl stop apache2.service
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h4 id=&#34;查看apache2-service状态&#34;&gt;查看apache2.service状态&lt;/h4&gt;
+&lt;h4 id=&#34;查看apache2-service状态:69138c1247bdb4999cb89f7ded85f8bd&#34;&gt;查看apache2.service状态&lt;/h4&gt;
 
 &lt;pre&gt;&lt;code&gt;$ sudo systemctl status apache2.service
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h4 id=&#34;在浏览器测试访问&#34;&gt;在浏览器测试访问&lt;/h4&gt;
+&lt;h4 id=&#34;在浏览器测试访问:69138c1247bdb4999cb89f7ded85f8bd&#34;&gt;在浏览器测试访问&lt;/h4&gt;
 
 &lt;pre&gt;&lt;code&gt;http://server-ip
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;&lt;img src=&#34;http://linux.mingguilu.com/images/170216_01_01_01.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
-&lt;h3 id=&#34;2-数据库服务mariadb&#34;&gt;2. 数据库服务MariaDB&lt;/h3&gt;
+&lt;h3 id=&#34;2-数据库服务mariadb:69138c1247bdb4999cb89f7ded85f8bd&#34;&gt;2. 数据库服务MariaDB&lt;/h3&gt;
 
-&lt;h4 id=&#34;安装mariadb&#34;&gt;安装MariaDB&lt;/h4&gt;
+&lt;h4 id=&#34;安装mariadb:69138c1247bdb4999cb89f7ded85f8bd&#34;&gt;安装MariaDB&lt;/h4&gt;
 
 &lt;pre&gt;&lt;code&gt;$ sudo apt install -y mariadb-server mariadb-client
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h4 id=&#34;设置mariadb-root用户密码&#34;&gt;设置MariaDB root用户密码&lt;/h4&gt;
+&lt;h4 id=&#34;设置mariadb-root用户密码:69138c1247bdb4999cb89f7ded85f8bd&#34;&gt;设置MariaDB root用户密码&lt;/h4&gt;
 
 &lt;pre&gt;&lt;code&gt;$ sudo mysql_secure_installation
 
@@ -87,7 +87,7 @@ installation should now be secure.
 Thanks for using MariaDB!
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h4 id=&#34;测试登录mariadb&#34;&gt;测试登录MariaDB&lt;/h4&gt;
+&lt;h4 id=&#34;测试登录mariadb:69138c1247bdb4999cb89f7ded85f8bd&#34;&gt;测试登录MariaDB&lt;/h4&gt;
 
 &lt;pre&gt;&lt;code&gt;$ sudo mysql -uroot -p  或  $ sudo mysql -u root -p
 
@@ -103,29 +103,29 @@ Type &#39;help;&#39; or &#39;\h&#39; for help. Type &#39;\c&#39; to clear the cu
 MariaDB [(none)]&amp;gt;
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h4 id=&#34;启动mariadb&#34;&gt;启动MariaDB&lt;/h4&gt;
+&lt;h4 id=&#34;启动mariadb:69138c1247bdb4999cb89f7ded85f8bd&#34;&gt;启动MariaDB&lt;/h4&gt;
 
 &lt;pre&gt;&lt;code&gt;$ sudo systemctl start mysql-service
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h4 id=&#34;停止mariadb&#34;&gt;停止MariaDB&lt;/h4&gt;
+&lt;h4 id=&#34;停止mariadb:69138c1247bdb4999cb89f7ded85f8bd&#34;&gt;停止MariaDB&lt;/h4&gt;
 
 &lt;pre&gt;&lt;code&gt;$ sudo systemctl stop mysql-service
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h4 id=&#34;查看mariadb&#34;&gt;查看MariaDB&lt;/h4&gt;
+&lt;h4 id=&#34;查看mariadb:69138c1247bdb4999cb89f7ded85f8bd&#34;&gt;查看MariaDB&lt;/h4&gt;
 
 &lt;pre&gt;&lt;code&gt;$ sudo systemctl status mysql.service
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h3 id=&#34;3-脚本语言php&#34;&gt;3. 脚本语言PHP&lt;/h3&gt;
+&lt;h3 id=&#34;3-脚本语言php:69138c1247bdb4999cb89f7ded85f8bd&#34;&gt;3. 脚本语言PHP&lt;/h3&gt;
 
-&lt;h4 id=&#34;安装php7&#34;&gt;安装PHP7&lt;/h4&gt;
+&lt;h4 id=&#34;安装php7:69138c1247bdb4999cb89f7ded85f8bd&#34;&gt;安装PHP7&lt;/h4&gt;
 
 &lt;pre&gt;&lt;code&gt;$ sudo apt install -y php7.0 php7.0-mysql php7.0-curl php7.0-json php7.0-cgi libapache2-mod-php7.0
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h4 id=&#34;查看php版本&#34;&gt;查看php版本&lt;/h4&gt;
+&lt;h4 id=&#34;查看php版本:69138c1247bdb4999cb89f7ded85f8bd&#34;&gt;查看php版本&lt;/h4&gt;
 
 &lt;pre&gt;&lt;code&gt;$ sudo php -v
 
@@ -135,7 +135,7 @@ Zend Engine v3.0.0, Copyright (c) 1998-2016 Zend Technologies
     with Zend OPcache v7.0.13-0ubuntu0.16.04.1, Copyright (c) 1999-2016, by Zend Technologies
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h4 id=&#34;创建php探针&#34;&gt;创建php探针&lt;/h4&gt;
+&lt;h4 id=&#34;创建php探针:69138c1247bdb4999cb89f7ded85f8bd&#34;&gt;创建php探针&lt;/h4&gt;
 
 &lt;pre&gt;&lt;code&gt;$ sudo vim /var/www/html/test.php
 
@@ -145,16 +145,16 @@ $ sudo cat /var/www/html/test.php
 ?&amp;gt;
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h4 id=&#34;在浏览器测试php探针文件&#34;&gt;在浏览器测试php探针文件&lt;/h4&gt;
+&lt;h4 id=&#34;在浏览器测试php探针文件:69138c1247bdb4999cb89f7ded85f8bd&#34;&gt;在浏览器测试php探针文件&lt;/h4&gt;
 
 &lt;pre&gt;&lt;code&gt;http://server-ip/test.php
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;&lt;img src=&#34;http://linux.mingguilu.com/images/170216_01_03_01.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
-&lt;h3 id=&#34;4-phpmyadmin&#34;&gt;4. phpMyAdmin&lt;/h3&gt;
+&lt;h3 id=&#34;4-phpmyadmin:69138c1247bdb4999cb89f7ded85f8bd&#34;&gt;4. phpMyAdmin&lt;/h3&gt;
 
-&lt;h4 id=&#34;安装phpmyadmin&#34;&gt;安装phpMyAdmin&lt;/h4&gt;
+&lt;h4 id=&#34;安装phpmyadmin:69138c1247bdb4999cb89f7ded85f8bd&#34;&gt;安装phpMyAdmin&lt;/h4&gt;
 
 &lt;pre&gt;&lt;code&gt;$ sudo apt install -y phpmyadmin
 &lt;/code&gt;&lt;/pre&gt;
@@ -171,14 +171,14 @@ $ sudo cat /var/www/html/test.php
 
 &lt;p&gt;&lt;img src=&#34;http://linux.mingguilu.com/images/170216_01_04_03.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
-&lt;h4 id=&#34;在浏览器测试访问phpmyadmin&#34;&gt;在浏览器测试访问phpMyAdmin&lt;/h4&gt;
+&lt;h4 id=&#34;在浏览器测试访问phpmyadmin:69138c1247bdb4999cb89f7ded85f8bd&#34;&gt;在浏览器测试访问phpMyAdmin&lt;/h4&gt;
 
 &lt;pre&gt;&lt;code&gt;http://server-ip/phpmyadmin
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;&lt;img src=&#34;http://linux.mingguilu.com/images/170216_01_04_04.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
-&lt;h4 id=&#34;登录phpmyadmin&#34;&gt;登录phpMyAdmin&lt;/h4&gt;
+&lt;h4 id=&#34;登录phpmyadmin:69138c1247bdb4999cb89f7ded85f8bd&#34;&gt;登录phpMyAdmin&lt;/h4&gt;
 
 &lt;p&gt;用户名：phpmyadmin&lt;/p&gt;
 
@@ -192,7 +192,7 @@ $ sudo cat /var/www/html/test.php
 
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
-&lt;h4 id=&#34;注意-如果使用root用户和密码登录phpmyadmin-则会报错&#34;&gt;注意：如果使用root用户和密码登录phpMyAdmin,则会报错：&lt;/h4&gt;
+&lt;h4 id=&#34;注意-如果使用root用户和密码登录phpmyadmin-则会报错:69138c1247bdb4999cb89f7ded85f8bd&#34;&gt;注意：如果使用root用户和密码登录phpMyAdmin,则会报错：&lt;/h4&gt;
 
 &lt;p&gt;&lt;strong&gt;待解决&lt;/strong&gt;：为什么root无法登录？因为禁止了root用户远程登录数据库？该怎么处理？&lt;/p&gt;
 
