@@ -161,6 +161,77 @@
             </a>
 
             <header class="article-header">
+    <a href="http://linux.mingguilu.com/2017/02/27/ubuntu%E7%A3%81%E7%9B%98%E7%A9%BA%E9%97%B4%E4%B8%8D%E8%B6%B3%E5%8D%B7boot%E4%BB%85%E5%89%A9%E4%BD%99xxmb%E7%9A%84%E7%A3%81%E7%9B%98%E7%A9%BA%E9%97%B4" class="permalink">
+    <h1 class="article-title" itemprop="name">
+        Ubuntu磁盘空间不足:卷boot仅剩余xxMB的磁盘空间
+    </h1>
+    </a>
+	<time datetime="2017-02-27 08:47:45 &#43;0800 CST" itemprop="datePublished">2017-02-27</time>
+
+        <div class="article-date">
+		<i class="fa fa-calendar"></i>
+            <time datetime="2017-02-27 08:47:45 &#43;0800 CST" itemprop="datePublished">2017-02-27</time>
+            &middot;
+            115
+            words
+            &middot;
+            1
+            minute read
+        </div>
+	<br>
+
+    <div class="article-meta">
+
+        
+        
+        <div class="article-category">
+            <i class="fa fa-folder"></i>
+            
+            <a class="article-category-link" href="http://linux.mingguilu.com/categories/ubuntu">Ubuntu</a>
+            
+            
+        </div>
+        
+        
+        
+        <div class="article-category">
+		<i class="fa fa-chevron-right"></i>
+		
+            
+            <a class="article-category-link" href="http://linux.mingguilu.com/tags/ubuntu16.04">Ubuntu16.04</a>
+            , 
+            
+            <a class="article-category-link" href="http://linux.mingguilu.com/tags/boot%e5%88%86%e5%8c%ba">Boot分区</a>
+            
+            
+        </div>
+        
+    </div>
+</header>
+
+            <div class="article-entry" itemprop="articleBody">
+                <p>
+                    最近启动Ubuntu16.04进入桌面之后，总弹出&rdquo;磁盘空间不足:卷boot仅剩余5.1MB的硬盘空间&rdquo;的提示 点击&rdquo;分析&hellip;&ldquo;之后提示&rdquo;无法扫描&rdquo;/boot&rdquo;所包含的某些文件夹 Error opening directory &lsquo;/boot/lost+found&rsquo;:权限不够&rdquo; 安装Ubuntu16.04系统时，分配给boot分区200MB的磁盘空间，升级系统之后，之前的内核版本依然会存在boot分区中，造成分区的空间不足。需要删除旧的Linux内核版本，保留当前使用的版本即可。 1. 查看已存在的Linux-image版本 $ sudo dpkg --get-selections |grep linux-image linux-image-4.4.0-21-generic install linux-image-4.4.0-59-generic install linux-image-4.4.0-62-generic install linux-image-4.4.0-64-generic install linux-image-extra-4.4.0-21-generic install linux-image-extra-4.4.0-59-generic install linux-image-extra-4.4.0-62-generic install linux-image-extra-4.4.0-64-generic install linux-image-generic install 2. 查看当前正在使用的Linux内核版本 $ uname -r 4.4.0-62-generic 或 $ cat /proc/version Linux version 4.4.0-62-generic (buildd@lcy01-30) (gcc version 5.4.0 20160609 (Ubuntu 5.4.0-6ubuntu1~16.04.4) ) #83-Ubuntu SMP Wed Jan 18 14:10:15 UTC 2017 3. 卸载其它不用的内核版本 $ sudo apt purge linux-image-4.4.0-21-generic $ sudo apt purge linux-image-4.4.0-59-generic 4. ...
+                </p>
+                <p class="article-more-link">
+                    <a href="http://linux.mingguilu.com/2017/02/27/ubuntu%E7%A3%81%E7%9B%98%E7%A9%BA%E9%97%B4%E4%B8%8D%E8%B6%B3%E5%8D%B7boot%E4%BB%85%E5%89%A9%E4%BD%99xxmb%E7%9A%84%E7%A3%81%E7%9B%98%E7%A9%BA%E9%97%B4">
+			    Read more
+			    
+                    </a>
+                </p>
+            </div>
+	    
+        </div>
+    </article>
+    
+    <article class="article article-type-post" itemscope="" itemprop="blogPost">
+
+	    <div class="article-inner">
+
+            
+            </a>
+
+            <header class="article-header">
     <a href="http://linux.mingguilu.com/2017/02/23/centos7%E4%BD%BF%E7%94%A8yum%E6%90%AD%E5%BB%BAsamba%E6%96%87%E4%BB%B6%E5%85%B1%E4%BA%AB" class="permalink">
     <h1 class="article-title" itemprop="name">
         CentOS7使用YUM搭建Samba文件共享
@@ -485,6 +556,12 @@
             
 	    <li>
 		    
+		<a href="http://linux.mingguilu.com/2017/02/27/ubuntu%E7%A3%81%E7%9B%98%E7%A9%BA%E9%97%B4%E4%B8%8D%E8%B6%B3%E5%8D%B7boot%E4%BB%85%E5%89%A9%E4%BD%99xxmb%E7%9A%84%E7%A3%81%E7%9B%98%E7%A9%BA%E9%97%B4" class="move">Ubuntu磁盘空间不足:卷boot仅剩余xxMB的磁盘空间</a>
+
+            </li>
+            
+	    <li>
+		    
 		<a href="http://linux.mingguilu.com/2017/02/23/centos7%E4%BD%BF%E7%94%A8yum%E6%90%AD%E5%BB%BAsamba%E6%96%87%E4%BB%B6%E5%85%B1%E4%BA%AB" class="move">CentOS7使用YUM搭建Samba文件共享</a>
 
             </li>
@@ -531,7 +608,7 @@
                 <a class="category-list-link" href="http://linux.mingguilu.com/categories/ubuntu">
                     ubuntu
                 </a>
-                <span class="category-list-count">3</span>
+                <span class="category-list-count">4</span>
             </li>
             
         </ul>
@@ -551,6 +628,13 @@
             <li class="category-list-item">
                 <a class="category-list-link" href="http://linux.mingguilu.com/tags/apache">
                     apache
+                </a>
+                <span class="category-list-count">1</span>
+            </li>
+            
+            <li class="category-list-item">
+                <a class="category-list-link" href="http://linux.mingguilu.com/tags/boot%e5%88%86%e5%8c%ba">
+                    boot分区
                 </a>
                 <span class="category-list-count">1</span>
             </li>
@@ -601,7 +685,7 @@
                 <a class="category-list-link" href="http://linux.mingguilu.com/tags/ubuntu16.04">
                     ubuntu16.04
                 </a>
-                <span class="category-list-count">2</span>
+                <span class="category-list-count">3</span>
             </li>
             
             <li class="category-list-item">

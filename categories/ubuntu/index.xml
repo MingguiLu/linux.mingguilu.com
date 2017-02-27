@@ -6,8 +6,86 @@
     <description>Recent content in Ubuntu on Linux</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Sat, 18 Feb 2017 14:17:37 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 27 Feb 2017 08:47:45 +0800</lastBuildDate>
     <atom:link href="http://linux.mingguilu.com/categories/ubuntu/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Ubuntu磁盘空间不足:卷boot仅剩余xxMB的磁盘空间</title>
+      <link>http://linux.mingguilu.com/2017/02/27/ubuntu%E7%A3%81%E7%9B%98%E7%A9%BA%E9%97%B4%E4%B8%8D%E8%B6%B3%E5%8D%B7boot%E4%BB%85%E5%89%A9%E4%BD%99xxmb%E7%9A%84%E7%A3%81%E7%9B%98%E7%A9%BA%E9%97%B4</link>
+      <pubDate>Mon, 27 Feb 2017 08:47:45 +0800</pubDate>
+      
+      <guid>http://linux.mingguilu.com/2017/02/27/ubuntu%E7%A3%81%E7%9B%98%E7%A9%BA%E9%97%B4%E4%B8%8D%E8%B6%B3%E5%8D%B7boot%E4%BB%85%E5%89%A9%E4%BD%99xxmb%E7%9A%84%E7%A3%81%E7%9B%98%E7%A9%BA%E9%97%B4</guid>
+      <description>
+
+&lt;p&gt;最近启动Ubuntu16.04进入桌面之后，总弹出&amp;rdquo;磁盘空间不足:卷boot仅剩余5.1MB的硬盘空间&amp;rdquo;的提示&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://linux.mingguilu.com/images/170227_01_00_01.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;点击&amp;rdquo;分析&amp;hellip;&amp;ldquo;之后提示&amp;rdquo;无法扫描&amp;rdquo;/boot&amp;rdquo;所包含的某些文件夹　Error opening directory &amp;lsquo;/boot/lost+found&amp;rsquo;:权限不够&amp;rdquo;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://linux.mingguilu.com/images/170227_01_00_02.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;安装Ubuntu16.04系统时，分配给boot分区200MB的磁盘空间，升级系统之后，之前的内核版本依然会存在boot分区中，造成分区的空间不足。需要删除旧的Linux内核版本，保留当前使用的版本即可。&lt;/p&gt;
+
+&lt;h4 id=&#34;1-查看已存在的linux-image版本:13cdc48018125c721d0ba97d2c9dfa24&#34;&gt;1.  查看已存在的Linux-image版本&lt;/h4&gt;
+
+&lt;pre&gt;&lt;code&gt;$ sudo dpkg --get-selections |grep linux-image  
+linux-image-4.4.0-21-generic            install  
+linux-image-4.4.0-59-generic            install  
+linux-image-4.4.0-62-generic            install  
+linux-image-4.4.0-64-generic            install  
+linux-image-extra-4.4.0-21-generic      install  
+linux-image-extra-4.4.0-59-generic      install  
+linux-image-extra-4.4.0-62-generic      install  
+linux-image-extra-4.4.0-64-generic      install  
+linux-image-generic             install     
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4 id=&#34;2-查看当前正在使用的linux内核版本:13cdc48018125c721d0ba97d2c9dfa24&#34;&gt;2. 查看当前正在使用的Linux内核版本&lt;/h4&gt;
+
+&lt;pre&gt;&lt;code&gt;$ uname -r  
+4.4.0-62-generic
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;或&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ cat /proc/version  
+Linux version 4.4.0-62-generic (buildd@lcy01-30) (gcc version 5.4.0 20160609 (Ubuntu 5.4.0-6ubuntu1~16.04.4) ) #83-Ubuntu SMP Wed Jan 18 14:10:15 UTC 2017
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4 id=&#34;3-卸载其它不用的内核版本:13cdc48018125c721d0ba97d2c9dfa24&#34;&gt;3. 卸载其它不用的内核版本&lt;/h4&gt;
+
+&lt;pre&gt;&lt;code&gt;$ sudo apt purge linux-image-4.4.0-21-generic 　
+
+$ sudo apt purge linux-image-4.4.0-59-generic 
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4 id=&#34;4-再次查看剩余的版本:13cdc48018125c721d0ba97d2c9dfa24&#34;&gt;4. 再次查看剩余的版本&lt;/h4&gt;
+
+&lt;pre&gt;&lt;code&gt;$ sudo dpkg --get-selections | grep linux-image  
+linux-image-4.4.0-62-generic            install  
+linux-image-4.4.0-64-generic            install  
+linux-image-extra-4.4.0-62-generic      install  
+linux-image-extra-4.4.0-64-generic      install  
+linux-image-generic             install  
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4 id=&#34;5-查看-boot分区的空间使用情况:13cdc48018125c721d0ba97d2c9dfa24&#34;&gt;5. 查看/boot分区的空间使用情况&lt;/h4&gt;
+
+&lt;pre&gt;&lt;code&gt;$ df -lh | grep boot   
+文件系统        1K-块     已用    可用   已用%  挂载点  
+/dev/sda1      180M     104M   64M     62%　　/boot  
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;em&gt;参考文档&lt;/em&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.linuxdiyf.com/linux/23774.html&#34;&gt;Ubuntu提示卷boot仅剩0字节的硬盘空间，解决办法&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
     
     <item>
       <title>Ubuntu使用一键安装包安装禅道开源版</title>
