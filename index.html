@@ -537,6 +537,86 @@
             </a>
 
             <header class="article-header">
+    <a href="http://linux.mingguilu.com/2016/12/30/linux%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85%E4%B8%8E%E7%BB%B4%E6%8A%A4" class="permalink">
+    <h1 class="article-title" itemprop="name">
+        Linux软件安装与维护
+    </h1>
+    </a>
+	<time datetime="2016-12-30 09:09:19 &#43;0800 CST" itemprop="datePublished">2016-12-30</time>
+
+        <div class="article-date">
+		<i class="fa fa-calendar"></i>
+            <time datetime="2016-12-30 09:09:19 &#43;0800 CST" itemprop="datePublished">2016-12-30</time>
+            &middot;
+            229
+            words
+            &middot;
+            2
+            minute read
+        </div>
+	<br>
+
+    <div class="article-meta">
+
+        
+        
+        <div class="article-category">
+            <i class="fa fa-folder"></i>
+            
+            <a class="article-category-link" href="http://linux.mingguilu.com/categories/ubuntu">Ubuntu</a>
+            ,
+            
+            <a class="article-category-link" href="http://linux.mingguilu.com/categories/centos">CentOS</a>
+            
+            
+        </div>
+        
+        
+        
+        <div class="article-category">
+		<i class="fa fa-chevron-right"></i>
+		
+            
+            <a class="article-category-link" href="http://linux.mingguilu.com/tags/apt">apt</a>
+            , 
+            
+            <a class="article-category-link" href="http://linux.mingguilu.com/tags/apt-get">apt-get</a>
+            , 
+            
+            <a class="article-category-link" href="http://linux.mingguilu.com/tags/rpm">rpm</a>
+            , 
+            
+            <a class="article-category-link" href="http://linux.mingguilu.com/tags/yum">yum</a>
+            
+            
+        </div>
+        
+    </div>
+</header>
+
+            <div class="article-entry" itemprop="articleBody">
+                <p>
+                    1. 使用软件源码包 2. Debian/Ubuntu Debian系Linux发行版的软件包格式为deb 2.1 dpkg dpkg的是基于Debian系统的一个低级包管理器。它可以安装，删除，提供有关资料，以及建立*.deb包，但它不能自动下载并安装它们相应的依赖包。 查看帮助 dpkg --help 查看指定软件包的信息 dpkg -I 下载/Software/vivaldi-stable_1.6.689.46-1_amd64.deb #以Vivaldi浏览器deb安装包为例 ##必须使用软件包的完整名称 列出指定软件包里的文件目录 dpkg -c 下载/Software/vivaldi-stable_1.6.689.46-1_amd64.deb #必须使用软件包的完整名称 安装deb软件包 dpkg -i vivaldi-stable_1.6.689.46-1_amd64.deb 列出所有已安装的软件包 dpkg -l 查询是否已安装指定软件包 dpkg -l vivaldi-stable #即可看到软件名称、版本、架构、描述信息 #注意软件名称必须正确，比如查询“vivaldi”就会提示“dpkg-query: 没有找到与 vivaldi 相匹配的软件包” #当不能确认完整的软件包名称，可以再输入“vivaldi”后，按“Tab”键，会列出所有相关包名称 查看已安装的软件包的详细信息 dpkg -s vivaldi-stable #同上，必须指定软件名称“vivaldi-stable”，而不能用原始的软件包名称“vivaldi-stable_1.6.689.46-1_amd64.deb” 列出指定软件包安装后的所有文件 dpkg -L vivaldi-stable #同上 卸载软件包（保留配置文件） dpkg -r vivaldi-stable #同上，必须指定软件名称“vivaldi-stable”，而不能用原始的软件包名称“vivaldi-stable_1.6.689.46-1_amd64.deb” 卸载软件包（删除配置文件） dpkg -p vivaldi-stable #有些软件包卸载后还会遗留一些配置文件，使用`-p`就像在windows上卸载软件时勾选上“同时清除用户配置文件” 安装指定目录及其子目录下所有的“.deb”包 dpkg -R --install debpackages/ # -R 参数表示递归，指定目录和子目录下所有的.deb包都将被安装 释放软件包，但不配置 dpkg --unpack ...
+                </p>
+                <p class="article-more-link">
+                    <a href="http://linux.mingguilu.com/2016/12/30/linux%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85%E4%B8%8E%E7%BB%B4%E6%8A%A4">
+			    Read more
+			    
+                    </a>
+                </p>
+            </div>
+	    
+        </div>
+    </article>
+    
+    <article class="article article-type-post" itemscope="" itemprop="blogPost">
+
+	    <div class="article-inner">
+
+            
+            </a>
+
+            <header class="article-header">
     <a href="http://linux.mingguilu.com/2016/12/15/%E6%89%93%E9%80%A0ubuntu%E6%A1%8C%E9%9D%A2" class="permalink">
     <h1 class="article-title" itemprop="name">
         打造Ubuntu桌面
@@ -657,6 +737,12 @@
             
 	    <li>
 		    
+		<a href="http://linux.mingguilu.com/2016/12/30/linux%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85%E4%B8%8E%E7%BB%B4%E6%8A%A4" class="move">Linux软件安装与维护</a>
+
+            </li>
+            
+	    <li>
+		    
 		<a href="http://linux.mingguilu.com/2016/12/15/%E6%89%93%E9%80%A0ubuntu%E6%A1%8C%E9%9D%A2" class="move">打造Ubuntu桌面</a>
 
             </li>
@@ -678,14 +764,14 @@
                 <a class="category-list-link" href="http://linux.mingguilu.com/categories/centos">
                     centos
                 </a>
-                <span class="category-list-count">1</span>
+                <span class="category-list-count">2</span>
             </li>
             
             <li class="category-list-item">
                 <a class="category-list-link" href="http://linux.mingguilu.com/categories/ubuntu">
                     ubuntu
                 </a>
-                <span class="category-list-count">5</span>
+                <span class="category-list-count">6</span>
             </li>
             
         </ul>
@@ -705,6 +791,20 @@
             <li class="category-list-item">
                 <a class="category-list-link" href="http://linux.mingguilu.com/tags/apache">
                     apache
+                </a>
+                <span class="category-list-count">1</span>
+            </li>
+            
+            <li class="category-list-item">
+                <a class="category-list-link" href="http://linux.mingguilu.com/tags/apt">
+                    apt
+                </a>
+                <span class="category-list-count">1</span>
+            </li>
+            
+            <li class="category-list-item">
+                <a class="category-list-link" href="http://linux.mingguilu.com/tags/apt-get">
+                    apt-get
                 </a>
                 <span class="category-list-count">1</span>
             </li>
@@ -752,6 +852,13 @@
             </li>
             
             <li class="category-list-item">
+                <a class="category-list-link" href="http://linux.mingguilu.com/tags/rpm">
+                    rpm
+                </a>
+                <span class="category-list-count">1</span>
+            </li>
+            
+            <li class="category-list-item">
                 <a class="category-list-link" href="http://linux.mingguilu.com/tags/samba">
                     samba
                 </a>
@@ -768,6 +875,13 @@
             <li class="category-list-item">
                 <a class="category-list-link" href="http://linux.mingguilu.com/tags/ubuntu%e6%a1%8c%e9%9d%a2">
                     ubuntu桌面
+                </a>
+                <span class="category-list-count">1</span>
+            </li>
+            
+            <li class="category-list-item">
+                <a class="category-list-link" href="http://linux.mingguilu.com/tags/yum">
+                    yum
                 </a>
                 <span class="category-list-count">1</span>
             </li>
