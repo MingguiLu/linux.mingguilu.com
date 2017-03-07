@@ -1423,6 +1423,29 @@ sudo apt-get install -f
 
 &lt;p&gt;&lt;img src=&#34;http://linux.mingguilu.com/images/Ubuntu_2_21_01.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
+&lt;h4 id=&#34;2-22-安装-teamviewer-https-www-teamviewer-com-zhcn:6983b54e6b04605973a28c88d174a1d6&#34;&gt;2.22 安装&lt;a href=&#34;https://www.teamviewer.com/zhcn/&#34;&gt;Teamviewer&lt;/a&gt;&lt;/h4&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://linux.mingguilu.com/images/Ubuntu_2_22_01.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;下载Ubuntu版&lt;a href=&#34;https://www.teamviewer.com/zhcn/download/linux/&#34;&gt;Teamviewer_12.0.71510_i386.deb&lt;/a&gt;,注意必须下载32位的版本&lt;/p&gt;
+
+&lt;p&gt;为64位Ubuntu16.04添加32位架构支持&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;sudo dpkg --add-architecture i386
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;安装Teamviewer的依赖包&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;sudo apt-get update
+
+sudo apt-get install libdbus-1-3:i386 libasound2:i386 libexpat1:i386 libfontconfig1:i386 libfreetype6:i386 libjpeg62:i386 libpng12-0:i386 libsm6:i386 libxdamage1:i386 libxext6:i386 libxfixes3:i386 libxinerama1:i386 libxrandr2:i386 libxrender1:i386 libxtst6:i386 zlib1g:i386 libc6:i386
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;安装Teamviewer12&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;sudo dpkg -i teamviewer_12.0.71510_i386.deb 
+&lt;/code&gt;&lt;/pre&gt;
+
 &lt;h3 id=&#34;3-常用工具软件安装:6983b54e6b04605973a28c88d174a1d6&#34;&gt;3. 常用工具软件安装&lt;/h3&gt;
 
 &lt;h4 id=&#34;3-1-安装albert:6983b54e6b04605973a28c88d174a1d6&#34;&gt;3.1 安装Albert&lt;/h4&gt;
@@ -1498,6 +1521,17 @@ sh VMware-Workstation-Full-12.5.2-4638234.x86_64.bundle
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;稍等弹出图形化的安装界面，与windows上安装相似，一路下一步至安装完毕。&lt;/p&gt;
+
+&lt;h4 id=&#34;3-10-安装-visual-studio-code-https-code-visualstudio-com:6983b54e6b04605973a28c88d174a1d6&#34;&gt;3.10　安装&lt;a href=&#34;https://code.visualstudio.com/&#34;&gt;Visual Studio Code&lt;/a&gt;&lt;/h4&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://linux.mingguilu.com/images/Ubuntu_3_10_01.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;下载Ubuntu版的.deb包 ：&lt;a href=&#34;https://code.visualstudio.com/docs/?dv=linux64_deb&#34;&gt;code_1.10.1-1488415350_amd64.deb&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;安装.deb包&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;sudo dpkg -i code_1.10.1-1488415350_amd64.deb
+&lt;/code&gt;&lt;/pre&gt;
 
 &lt;h3 id=&#34;4-使用samba与windows共享文件:6983b54e6b04605973a28c88d174a1d6&#34;&gt;4. 使用Samba与Windows共享文件&lt;/h3&gt;
 
